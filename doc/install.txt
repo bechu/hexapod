@@ -1,0 +1,111 @@
+http://www.societyofrobots.com/axon2/axon2_setup3.shtml
+
+
+code source linux pour bootloader uploader :
+http://www.avrfreaks.net/index.php?module=Freaks%20Academy&func=viewItem&item_type=project&item_id=1927
+
+login : poubellajohn et mdp : azerty1
+
+
+packets à installer sous linux :
+http://www.societyofrobots.com/robotforum/index.php?topic=8216.msg63950#new
+
+   sudo apt-get install build-essential gcc-avr gdb-avr binutils-avr avr-libc simulavr minicom
+
+**************************************************
+* Axon on Ubuntu Linux (tested with 9.04 and up)     *
+**************************************************
+
+* INSTALLATION
+
+- Base packages:
+   sudo apt-get install build-essential gcc-avr gdb-avr binutils-avr avr-libc simulavr minicom
+
+- Compile the bootloader
+   Download the bootloader [1]
+   cd <bootloader_dir>
+   make
+
+* WORKING WITH THE CONTROLLER
+
+- Plug the controller in a USB port, recent kernels already contain the driver.
+- Check if the BAUD rate of the serial port is correct [2]:
+   stty -F /dev/ttyUSB0   (use /dev/ttyUSB<n> according to your particular system)
+  The BAUD should be 115200, else set it:
+   stty -F /dev/ttyUSB0 115200
+- Connect to ttyUSB0 via minicom [3]:
+   - run
+      minicom -s
+     choose Serial port setup and select the correct serial device node (here /dev/ttyUSB0)
+   - Save configuration as def[ault] (optional)
+   - run minicom, you should now be connected
+   - To quit minicom, CTRL+A, then Z and finally Q
+
+* PROGRAMMING
+
+- Download Axon source files
+- Edit the source files as you need
+- Run make
+- Assure your Axon is turned OFF! (i.e. battery disconnected, but still connected to USB clearly)
+- Upload the program to the device (make sure minicom is not active!):
+   ./bootloader -d /dev/ttyUSB0 -b 115200 -p file.hex
+  where file.hex is your program (run bootloader without arguments for help)
+- Turn on your Axon (i.e. connect power), programming should start (make sure there is no minicom instance running as it will lock the device!)
+- Once programming is complete, your done.
+
+* REFERENCES
+
+[1] http://www.avrfreaks.net/index.php?module=Freaks%20Academy&func=viewItem&item_type=project&item_id=1927
+[2] http://embedded.seattle.intel-research.net/wiki/index.php?title=Using_other_UARTs_in_Linux
+[3] http://www.cyberciti.biz/tips/connect-soekris-single-board-computer-using-minicom.html
+
+
+# Simple Makefile for Axon
+# Written by Sandro Mani, version 20.06.2009
+#
+# Rules:
+# all      -> build
+# build      build the program
+# clean      clean built files
+# program   program the device
+
+# Project settings
+# MCU type, i.e. atmega640
+MCU = atmega640
+# dev node of the controller, i.e. /dev/ttyUSB0
+DEVNODE = ttyUSB0
+# Name of the project
+NAME = Axon
+# List of needed object files
+OBJFILES=a2d.o main.o buffer.o rprintf.o timer640.o uart4.o
+
+# Compiler flags settings
+CC = avr-gcc
+CFLAGS = -mmcu=$(MCU) -Os -Wall -Wstrict-prototypes -std=gnu99
+LDFLAGS = -lm
+
+all: build
+
+build: $(NAME).bin
+   @echo Creating program $(NAME).hex...
+   @avr-objcopy -O ihex -R .eeprom $(NAME).bin $(NAME).hex
+   @echo
+   @echo Done!
+   @avr-size --target=ihex $(NAME).hex
+
+$(NAME).bin: $(OBJFILES)
+   @echo Linking $(OBJFILES) to $(NAME).bin...
+   @$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -o $(NAME).bin
+
+%.o: %.c
+   @echo Compiling $<...
+   @$(CC) -c $(CFLAGS) $< -o $@
+
+clean:
+   @echo Cleaning up...
+   @rm -f *.o $(NAME).bin $(NAME).hex
+
+program: build
+   ./bootloader -d /dev/$(DEVNODE) -b 115200 -p $(NAME).hex
+
+
