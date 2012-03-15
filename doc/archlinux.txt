@@ -1,0 +1,9 @@
+yaourt -S avr-binutils avr-gcc avr-libc;
+
+# installrer un manipulateur d'eeprom
+avrdude
+
+avr-gdb
+yaourt -S simulavr
+
+
