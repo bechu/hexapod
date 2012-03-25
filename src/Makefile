@@ -1,11 +1,23 @@
 
 MCU = atmega640
-TARGET = test
+TARGET = hexapod
 OBJFILES = main.o
 
+COMMON = -mmcu=$(MCU)
+
 CC = avr-gcc
-CFLAGS = -mmcu=$(MCU)
-LDFLAGS = 
+CFLAGS = $(COMMON)
+CFLAGS += -Wall -gdwarf-2 -std=gnu99  -DF_CPU=16000000UL -O0 -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
+CFLAGS += 
+LDFLAGS = $(COMMON)
+
+## Include Directories
+INCLUDES = -I"./webbotavrclib" 
+
+## Library Directories
+LIBDIRS = -L"./webbotavrclib" 
+
+LIBS =  -lWebbot-ATMega640
 
 all: build
 
@@ -14,10 +26,10 @@ build: $(TARGET).bin
 	avr-size --target=ihex $(TARGET).hex
 
 $(TARGET).bin: $(OBJFILES)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -o $(TARGET).bin
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES)  $(LIBDIRS) $(LIBS) -o $(TARGET).bin
 
 %.o : %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f *.o $(TARGET).bin $(TARGET).hex
