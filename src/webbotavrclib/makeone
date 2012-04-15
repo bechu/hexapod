@@ -1,0 +1,500 @@
+C_SRCS=\
+./BufferQueue.c\
+./Cameras/AVRcam/avrcam.c\
+./Cameras/Surveyor/blackfin.c\
+./Cameras/Surveyor/blackfin_vb.c\
+./Cameras/Surveyor/blackfin_vc.c\
+./Cameras/Surveyor/blackfin_vf.c\
+./Cameras/Surveyor/blackfin_vm.c\
+./Cameras/Surveyor/blackfin_vp.c\
+./Cameras/_camera_common.c\
+./Motors/DimensionEngineering/Sabertooth.c\
+./Motors/L293D.c\
+./Motors/Pololu/DualSerial.c\
+./Motors/Sanyo/LB1836M.c\
+./Motors/Solarbotics/L298.c\
+./Motors/Toshiba/TB6612FNG_2pin.c\
+./Motors/Toshiba/TB6612FNG_3pin.c\
+./Servos/serialServo.c\
+./Storage/FileSystem/FATImpl.c\
+./Storage/FileSystem/FATdelfile.c\
+./Storage/FileSystem/FATfile.c\
+./Storage/FileSystem/FATlist.c\
+./Storage/FileSystem/FATmkdir.c\
+./Storage/i2cEEPROM.c\
+./Storage/sdCard.c\
+./Storage/spiEEPROM.c\
+./_i2c_common.c\
+./_spi_common.c\
+./_uart_common.c\
+./a2d.c\
+./a2dReadMv.c\
+./actuators.c\
+./buffer.c\
+./buffer2.c\
+./color1.c\
+./color2.c\
+./color3.c\
+./color_dump.c\
+./core.c\
+./core_interp.c\
+./core_interpU.c\
+./core_isqrt.c\
+./fraction32.c\
+./i2cBus.c\
+./i2cHwBus.c\
+./i2cSwBus.c\
+./i2c_slave.c\
+./iopin.c\
+./iopin_pulseIn.c\
+./iopin_pulseOut.c\
+./led.c\
+./motorPWM.c\
+./pid.c\
+./pinChange.c\
+./pwm.c\
+./rprintf.c\
+./rprintfHexDump.c\
+./rprintfStrLen.c\
+./rprintfc.c\
+./rprintff.c\
+./rprintfh.c\
+./rprintfn.c\
+./rprintfs.c\
+./scheduler.c\
+./segled.c\
+./segledMarquee.c\
+./servoMux.c\
+./servoPWM.c\
+./servos.c\
+./servosCenter.c\
+./servosConfig.c\
+./servosConnect.c\
+./servosSpeed.c\
+./spi.c\
+./spiUart.c\
+./spisw.c\
+./timer.c\
+./timerCapture.c\
+./timerCompare.c\
+./timerOverflow.c\
+./timerPWM.c\
+./uart.c\
+./uartsw.c
+
+OBJS = \
+$(OUT)/BufferQueue.o\
+$(OUT)/Cameras/AVRcam/avrcam.o\
+$(OUT)/Cameras/Surveyor/blackfin.o\
+$(OUT)/Cameras/Surveyor/blackfin_vb.o\
+$(OUT)/Cameras/Surveyor/blackfin_vc.o\
+$(OUT)/Cameras/Surveyor/blackfin_vf.o\
+$(OUT)/Cameras/Surveyor/blackfin_vm.o\
+$(OUT)/Cameras/Surveyor/blackfin_vp.o\
+$(OUT)/Cameras/_camera_common.o\
+$(OUT)/Motors/DimensionEngineering/Sabertooth.o\
+$(OUT)/Motors/L293D.o\
+$(OUT)/Motors/Pololu/DualSerial.o\
+$(OUT)/Motors/Sanyo/LB1836M.o\
+$(OUT)/Motors/Solarbotics/L298.o\
+$(OUT)/Motors/Toshiba/TB6612FNG_2pin.o\
+$(OUT)/Motors/Toshiba/TB6612FNG_3pin.o\
+$(OUT)/Servos/Devantech/SD21.o\
+$(OUT)/Servos/Dynamixel/AX12.o\
+$(OUT)/Servos/Dynamixel/AX12dump.o\
+$(OUT)/Servos/Dynamixel/AX12dumpAll.o\
+$(OUT)/Servos/Dynamixel/AX12info.o\
+$(OUT)/Servos/serialServo.o\
+$(OUT)/Storage/FileSystem/FATImpl.o\
+$(OUT)/Storage/FileSystem/FATdelfile.o\
+$(OUT)/Storage/FileSystem/FATfile.o\
+$(OUT)/Storage/FileSystem/FATlist.o\
+$(OUT)/Storage/FileSystem/FATmkdir.o\
+$(OUT)/Storage/i2cEEPROM.o\
+$(OUT)/Storage/sdCard.o\
+$(OUT)/Storage/spiEEPROM.o\
+$(OUT)/_i2c_common.o\
+$(OUT)/_spi_common.o\
+$(OUT)/_uart_common.o\
+$(OUT)/a2d.o\
+$(OUT)/a2dReadMv.o\
+$(OUT)/actuators.o\
+$(OUT)/buffer.o\
+$(OUT)/buffer2.o\
+$(OUT)/color1.o\
+$(OUT)/color2.o\
+$(OUT)/color3.o\
+$(OUT)/color_dump.o\
+$(OUT)/core.o\
+$(OUT)/core_interp.o\
+$(OUT)/core_interpU.o\
+$(OUT)/core_isqrt.o\
+$(OUT)/fraction32.o\
+$(OUT)/i2cBus.o\
+$(OUT)/i2cHwBus.o\
+$(OUT)/i2cSwBus.o\
+$(OUT)/i2c_slave.o\
+$(OUT)/iopin.o\
+$(OUT)/iopin_pulseIn.o\
+$(OUT)/iopin_pulseOut.o\
+$(OUT)/led.o\
+$(OUT)/motorPWM.o\
+$(OUT)/pid.o\
+$(OUT)/pinChange.o\
+$(OUT)/pwm.o\
+$(OUT)/rprintf.o\
+$(OUT)/rprintfHexDump.o\
+$(OUT)/rprintfStrLen.o\
+$(OUT)/rprintfc.o\
+$(OUT)/rprintff.o\
+$(OUT)/rprintfh.o\
+$(OUT)/rprintfn.o\
+$(OUT)/rprintfs.o\
+$(OUT)/scheduler.o\
+$(OUT)/segled.o\
+$(OUT)/segledMarquee.o\
+$(OUT)/servoMux.o\
+$(OUT)/servoPWM.o\
+$(OUT)/servos.o\
+$(OUT)/servosCenter.o\
+$(OUT)/servosConfig.o\
+$(OUT)/servosConnect.o\
+$(OUT)/servosSpeed.o\
+$(OUT)/spi.o\
+$(OUT)/spiUart.o\
+$(OUT)/spisw.o\
+$(OUT)/timer.o\
+$(OUT)/timerCapture.o\
+$(OUT)/timerCompare.o\
+$(OUT)/timerOverflow.o\
+$(OUT)/timerPWM.o\
+$(OUT)/uart.o\
+$(OUT)/uartsw.o
+
+C_DEPS=\
+$(OUT)/BufferQueue.d\
+$(OUT)/Cameras/AVRcam/avrcam.d\
+$(OUT)/Cameras/Surveyor/blackfin.d\
+$(OUT)/Cameras/Surveyor/blackfin_vb.d\
+$(OUT)/Cameras/Surveyor/blackfin_vc.d\
+$(OUT)/Cameras/Surveyor/blackfin_vf.d\
+$(OUT)/Cameras/Surveyor/blackfin_vm.d\
+$(OUT)/Cameras/Surveyor/blackfin_vp.d\
+$(OUT)/Cameras/_camera_common.d\
+$(OUT)/Motors/DimensionEngineering/Sabertooth.d\
+$(OUT)/Motors/L293D.d\
+$(OUT)/Motors/Pololu/DualSerial.d\
+$(OUT)/Motors/Sanyo/LB1836M.d\
+$(OUT)/Motors/Solarbotics/L298.d\
+$(OUT)/Motors/Toshiba/TB6612FNG_2pin.d\
+$(OUT)/Motors/Toshiba/TB6612FNG_3pin.d\
+$(OUT)/Servos/Devantech/SD21.d\
+$(OUT)/Servos/Dynamixel/AX12.d\
+$(OUT)/Servos/Dynamixel/AX12dump.d\
+$(OUT)/Servos/Dynamixel/AX12dumpAll.d\
+$(OUT)/Servos/Dynamixel/AX12info.d\
+$(OUT)/Servos/serialServo.d\
+$(OUT)/Storage/FileSystem/FATImpl.d\
+$(OUT)/Storage/FileSystem/FATdelfile.d\
+$(OUT)/Storage/FileSystem/FATfile.d\
+$(OUT)/Storage/FileSystem/FATlist.d\
+$(OUT)/Storage/FileSystem/FATmkdir.d\
+$(OUT)/Storage/i2cEEPROM.d\
+$(OUT)/Storage/sdCard.d\
+$(OUT)/Storage/spiEEPROM.d\
+$(OUT)/_i2c_common.d\
+$(OUT)/_spi_common.d\
+$(OUT)/_uart_common.d\
+$(OUT)/a2d.d\
+$(OUT)/a2dReadMv.d\
+$(OUT)/actuators.d\
+$(OUT)/buffer.d\
+$(OUT)/buffer2.d\
+$(OUT)/color1.d\
+$(OUT)/color2.d\
+$(OUT)/color3.d\
+$(OUT)/color_dump.d\
+$(OUT)/core.d\
+$(OUT)/core_interp.d\
+$(OUT)/core_interpU.d\
+$(OUT)/core_isqrt.d\
+$(OUT)/fraction32.d\
+$(OUT)/i2cBus.d\
+$(OUT)/i2cHwBus.d\
+$(OUT)/i2cSwBus.d\
+$(OUT)/i2c_slave.d\
+$(OUT)/iopin.d\
+$(OUT)/iopin_pulseIn.d\
+$(OUT)/iopin_pulseOut.d\
+$(OUT)/led.d\
+$(OUT)/motorPWM.d\
+$(OUT)/pid.d\
+$(OUT)/pinChange.d\
+$(OUT)/pwm.d\
+$(OUT)/rprintf.d\
+$(OUT)/rprintfHexDump.d\
+$(OUT)/rprintfStrLen.d\
+$(OUT)/rprintfc.d\
+$(OUT)/rprintff.d\
+$(OUT)/rprintfh.d\
+$(OUT)/rprintfn.d\
+$(OUT)/rprintfs.d\
+$(OUT)/scheduler.d\
+$(OUT)/segled.d\
+$(OUT)/segledMarquee.d\
+$(OUT)/servoMux.d\
+$(OUT)/servoPWM.d\
+$(OUT)/servos.d\
+$(OUT)/servosCenter.d\
+$(OUT)/servosConfig.d\
+$(OUT)/servosConnect.d\
+$(OUT)/servosSpeed.d\
+$(OUT)/spi.d\
+$(OUT)/spiUart.d\
+$(OUT)/spisw.d\
+$(OUT)/timer.d\
+$(OUT)/timerCapture.d\
+$(OUT)/timerCompare.d\
+$(OUT)/timerOverflow.d\
+$(OUT)/timerPWM.d\
+$(OUT)/uart.d\
+$(OUT)/uartsw.d
+
+CFLAGS = -DBUILDING_LIBRARY -Wall -Os -gdwarf-2 -std=gnu99 -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
+CPPFLAGS = -Wall -gdwarf-2            -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
+.PHONY: default
+
+default:
+	@echo 'Dont call me directly !'
+
+# Each subdirectory requires its own build rules:-
+$(OUT)/Storage/FileSystem/%.o: Storage/FileSystem/%.c makeone
+	$(shell   mkdir -p $(OUT)/Storage/FileSystem/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/FileSystem/%.o: Storage/FileSystem/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Storage/FileSystem/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/%.o: Storage/%.c makeone
+	$(shell   mkdir -p $(OUT)/Storage/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/%.o: Storage/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Storage/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+$(OUT)/Servos/Dynamixel/%.o: Servos/Dynamixel/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/Dynamixel/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Dynamixel/%.o: Servos/Dynamixel/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/Dynamixel/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Devantech/%.o: Servos/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Devantech/%.o: Servos/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/%.o: Servos/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/%.o: Servos/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+$(OUT)/Motors/Toshiba/%.o: Motors/Toshiba/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Toshiba/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Toshiba/%.o: Motors/Toshiba/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Toshiba/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Solarbotics/%.o: Motors/Solarbotics/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Solarbotics/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Solarbotics/%.o: Motors/Solarbotics/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Solarbotics/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Sanyo/%.o: Motors/Sanyo/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Sanyo/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Sanyo/%.o: Motors/Sanyo/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Sanyo/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Pololu/%.o: Motors/Pololu/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Pololu/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Pololu/%.o: Motors/Pololu/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Pololu/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/DimensionEngineering/%.o: Motors/DimensionEngineering/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/DimensionEngineering/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/DimensionEngineering/%.o: Motors/DimensionEngineering/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/DimensionEngineering/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/%.o: Motors/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/%.o: Motors/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+$(OUT)/Cameras/Surveyor/%.o: Cameras/Surveyor/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/Surveyor/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/Surveyor/%.o: Cameras/Surveyor/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/Surveyor/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/AVRcam/%.o: Cameras/AVRcam/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/AVRcam/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/AVRcam/%.o: Cameras/AVRcam/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/AVRcam/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/%.o: Cameras/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/%.o: Cameras/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+$(OUT)/%.o: %.c makeone
+	$(shell   mkdir -p $(OUT)/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/%.o: %.cpp makeone
+	$(shell   mkdir -p $(OUT)/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+libWebbot-ATMega328P.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega328P.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega644.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega644.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega32.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega32.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega168.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega168.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega1280.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega1280.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega128.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega128.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega1284P.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega1284P.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega128RFA1.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega128RFA1.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega2561.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega2561.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega2560.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega2560.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega640.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega640.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega8.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega8.lss
+	@echo 'Finished building target: $@'
+

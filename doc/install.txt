@@ -109,3 +109,4 @@ program: build
    ./bootloader -d /dev/$(DEVNODE) -b 115200 -p $(NAME).hex
 
 
+./configure --target=avr --prefix=/usr/local/avr --program-prefix="avr-"
