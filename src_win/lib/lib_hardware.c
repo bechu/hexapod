@@ -58,20 +58,22 @@ static MAKE_WRITER(marquee_put_char){ /* createWriter */
 }
 SERVO _servo1_ = MAKE_SERVO(false,H3,1500,500);
 SERVO _servo2_ = MAKE_SERVO(false,H4,1500,500);
+SERVO _servo3_ = MAKE_SERVO(false,H5,1500,500);
 
 static SERVO_LIST PROGMEM bank1_list[] = {
 	&_servo1_,
-	&_servo2_
+	&_servo2_,
+	&_servo3_
 };
 SERVO_DRIVER _bank1_ = MAKE_SERVO_DRIVER(bank1_list);
 
 // ----------- Initialise built in devices ------
 void sysInitHardware(void){
 	SWITCH_init(&_button_);
-	setErrorLog(&uart1SendByte);
-	rprintfInit(&uart1SendByte);
+//	setErrorLog(&uart1SendByte);
+	//rprintfInit(&uart1SendByte);
 	uartInit(_C_uart1,115200);
-	segled_init(&_led_display_);
+	//segled_init(&_led_display_);
 }
 
 // ----------- Initialise my added devices ------

@@ -83,6 +83,7 @@ extern SEGLED _led_display_;
 extern MARQUEE _marquee_;
 extern SERVO _servo1_;
 extern SERVO _servo2_;
+extern SERVO _servo3_;
 extern SERVO_DRIVER _bank1_;
 
 void initHardware(void);

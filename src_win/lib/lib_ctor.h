@@ -9,6 +9,7 @@ extern Switch button;
 extern Marquee marquee;
 extern Servo servo1;
 extern Servo servo2;
+extern Servo servo3;
 extern ServoDriver bank1;
 extern UartHW uart1;
 #endif

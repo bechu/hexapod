@@ -8,6 +8,7 @@ Switch button(&_button_);
 Marquee marquee(&_marquee_);
 Servo servo1(&_servo1_);
 Servo servo2(&_servo2_);
+Servo servo3(&_servo3_);
 ServoDriver bank1(&_bank1_);
 UartHW uart1(_C_uart1);
 #include <Stream/Stream.h>

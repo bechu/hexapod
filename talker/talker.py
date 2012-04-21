@@ -11,11 +11,15 @@ class Axon2(threading.Thread):
         self.setDaemon(True)
         self.serial_mutex = threading.Lock()
         self.ser = serial.Serial()
-        self.ser.setTimeout(0.015)
+        self.ser.setTimeout(15)
+        self.ser.bytesize = 8
+        self.ser.parity = 'N'
         self.ser.baudrate = 115200
         self.ser.port = 0
+        self.ser.stopbits = 1
         self.run4ever = True
         self.ser.open()
+        print self.ser
 		
     def stop(self):
         self.run4ever = False
@@ -34,10 +38,9 @@ class Axon2(threading.Thread):
 
     def write_serial(self, data):
         self.serial_mutex.acquire()
-        self.ser.flushInput()
-        self.ser.flushOutput()
-        for c in data:
-            self.ser.write(c)
+        #self.ser.flushInput()
+        #self.ser.flushOutput()
+        self.ser.write(0x61)
         self.serial_mutex.release()
         
     def read_serial(self):
@@ -48,20 +51,21 @@ class Axon2(threading.Thread):
         return str
 
     def ping(self):
-        packet = [PING, 5, 'h', 'e', 'l', 'l', 'o']
+        packet = [0x7A, 0x7A,0x7A,0x7A,0x7A,0x7A,0x7A]
         self.write_serial(packet)
         
     def run(self):
         while self.run4ever == True:
             str = self.read_serial()
             if len(str) > 0:
-                print str
+				print str
         
 def main():
     try:
         test = Axon2()
         test.start()
-        test.ping()
+        test.ser.write(0x0a)
+        #test.ping()
         while True: time.sleep(100)
     except (KeyboardInterrupt, SystemExit):
         print '\n! Received keyboard interrupt, quitting threads.\n'

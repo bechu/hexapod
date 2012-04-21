@@ -13,6 +13,7 @@ void appInitHardware(void) {
 
 // Initialise the software
 TICK_COUNT appInitSoftware(TICK_COUNT loopStart){
+	uart1.setPollingMode(false);
 	test.init(&uart1);
     ping.init(&test);
 	return 0;
@@ -25,8 +26,9 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
     
 	// treat input/output for the protocol
 	test.treatIO();
-	if(test.haveMessage == true)
-			test._write("true", 4);
+	test.receive();
+	//if(test.haveMessage == true)
+	//		test._write("true", 4);
   /*  if(test.receive() == true)
     {
 		test._write("abc", 3);
@@ -82,9 +84,11 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
 			
 	}
 	// -------- End   Marquee-------
-
+	*/
 	// -------- Start Actuators -------
 	// This example will move the motors back and forth using the loopStart time:
+	
+/*	
 	TICK_COUNT ms = loopStart / 1000;		// Get current time in ms
 	int16_t now = ms % (TICK_COUNT)10000; 	// 10 sec for a full swing
 	if(now >= (int16_t)5000){				// Goes from 0ms...5000ms
@@ -95,6 +99,7 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
 	// Set speed for all motors/servos
 	servo1.setSpeed(speed);
 	servo2.setSpeed(speed);
+	servo3.setSpeed(speed);
 	// -------- End   Actuators -------
 */
 	return 0;

@@ -28,14 +28,15 @@ public:
     void send(Packet &msg);
 	Packet msg;
 //private:
-    void _write(char *data, int size);
-	char _read(char *data, int size);
+	void dump(uint8_t c);
+    void _write(uint8_t *data, int size);
+	uint8_t _read();
 	UartHW *_uart;
 	static const int BUFFER_SIZE = 20;
-	char in[BUFFER_SIZE];
-	char out[BUFFER_SIZE];
-	char in_offset;
-	char out_offset;
+	uint8_t in[BUFFER_SIZE];
+	uint8_t out[BUFFER_SIZE];
+	uint8_t in_offset;
+	uint8_t out_offset;
 	bool haveMessage;
 };
 
