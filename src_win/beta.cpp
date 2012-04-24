@@ -26,7 +26,8 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
     
 	// treat input/output for the protocol
 	test.treatIO();
-	test.receive();
+//	test.receive();
+//	marquee.print("3");
 	//if(test.haveMessage == true)
 	//		test._write("true", 4);
   /*  if(test.receive() == true)

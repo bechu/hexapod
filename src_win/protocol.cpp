@@ -28,9 +28,11 @@ void Protocol::treatIO()
 	_read();
 	if(in_offset >0 )
 {
-_write((uint8_t*)"test\n", 5);
-dump(in[0]);
-_write(in, in_offset);
+//_write((uint8_t*)"test\n", 5);
+
+for(int i=0;i<in_offset;i++)
+	dump(in[i]);
+//_write(in, in_offset);
         	in_offset = 0;
 }
     /*if(in_offset >= 2)

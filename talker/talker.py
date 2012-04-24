@@ -38,9 +38,10 @@ class Axon2(threading.Thread):
 
     def write_serial(self, data):
         self.serial_mutex.acquire()
-        #self.ser.flushInput()
-        #self.ser.flushOutput()
-        self.ser.write(0x61)
+        self.ser.flushInput()
+        self.ser.flushOutput()
+        for c in data:
+            self.ser.write(c)
         self.serial_mutex.release()
         
     def read_serial(self):
@@ -51,7 +52,7 @@ class Axon2(threading.Thread):
         return str
 
     def ping(self):
-        packet = [0x7A, 0x7A,0x7A,0x7A,0x7A,0x7A,0x7A]
+        packet = ['a', 255]
         self.write_serial(packet)
         
     def run(self):
@@ -64,8 +65,8 @@ def main():
     try:
         test = Axon2()
         test.start()
-        test.ser.write(0x0a)
-        #test.ping()
+        #test.ser.write(0x0a)
+        test.ping()
         while True: time.sleep(100)
     except (KeyboardInterrupt, SystemExit):
         print '\n! Received keyboard interrupt, quitting threads.\n'
