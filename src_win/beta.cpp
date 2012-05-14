@@ -14,8 +14,8 @@ void appInitHardware(void) {
 // Initialise the software
 TICK_COUNT appInitSoftware(TICK_COUNT loopStart){
 	uart1.setPollingMode(false);
-	test.init(&uart1);
-    ping.init(&test);
+	//test.init(&uart1);
+    //ping.init(&test);
 	return 0;
 }
 
@@ -25,7 +25,7 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
 
     
 	// treat input/output for the protocol
-	test.treatIO();
+//	test.treatIO();
 //	test.receive();
 //	marquee.print("3");
 	//if(test.haveMessage == true)
@@ -89,19 +89,19 @@ TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
 	// -------- Start Actuators -------
 	// This example will move the motors back and forth using the loopStart time:
 	
-/*	
+
 	TICK_COUNT ms = loopStart / 1000;		// Get current time in ms
-	int16_t now = ms % (TICK_COUNT)10000; 	// 10 sec for a full swing
-	if(now >= (int16_t)5000){				// Goes from 0ms...5000ms
-		now = (int16_t)10000 - now;			// then 5000ms...0ms
+	int16_t now = ms % (TICK_COUNT)5000; 	// 10 sec for a full swing
+	if(now >= (int16_t)2500){				// Goes from 0ms...5000ms
+		now = (int16_t)5000 - now;			// then 5000ms...0ms
 	}
 	// Map it into DRIVE_SPEED range
-	DRIVE_SPEED speed = interpolate(now, 0, 5000, DRIVE_SPEED_MIN, DRIVE_SPEED_MAX);
+	DRIVE_SPEED speed = interpolate(now, 0, 2500, DRIVE_SPEED_MIN, DRIVE_SPEED_MAX);
 	// Set speed for all motors/servos
 	servo1.setSpeed(speed);
 	servo2.setSpeed(speed);
 	servo3.setSpeed(speed);
 	// -------- End   Actuators -------
-*/
-	return 0;
+
+	return HEXAPOD_LOOP_DURATION;
 }

@@ -2,7 +2,7 @@
 # The name of the project
 PRG            = beta
 # Files owned by the user
-OBJUSER        = beta.o protocol.o services.o
+OBJUSER        = beta.o protocol.o services.o smart_motor.o
 # Generated files that are required
 OBJREQD        = lib/lib_hardware.o lib/lib_timerdef.o lib/gen_clock.o lib/lib_iopins.o lib/lib_ctor.o lib/lib_timers.o 
 # Generated files that are optional
@@ -112,6 +112,9 @@ protocol.o: protocol.cpp
 
 services.o: services.cpp
 		$(CPP) $(CPPFLAGS) $(OPTIMIZE) -c -o $@ services.cpp
+
+smart_motor.o: smart_motor.cpp
+		$(CPP) $(CPPFLAGS) $(OPTIMIZE) -c -o $@ smart_motor.cpp
         
 size: $(PRG).elf
 	$(SIZE) --format=avr --mcu=${MCU_TARGET} $(PRG).elf	

@@ -56,9 +56,9 @@ MARQUEE _marquee_ = MAKE_MARQUEE(marquee_list,500000,2000000,&marquee_put_char);
 static MAKE_WRITER(marquee_put_char){ /* createWriter */
 	return marqueeSendByte(&_marquee_,byte);
 }
-SERVO _servo1_ = MAKE_SERVO(false,H3,1500,500);
-SERVO _servo2_ = MAKE_SERVO(false,H4,1500,500);
-SERVO _servo3_ = MAKE_SERVO(false,H5,1500,500);
+SERVO _servo1_ = MAKE_SERVO(false,H3,SERVO_TGY_CENTER,SERVO_TGY_RANGE);
+SERVO _servo2_ = MAKE_SERVO(false,H4,SERVO_TGY_CENTER,SERVO_TGY_RANGE);
+SERVO _servo3_ = MAKE_SERVO(false,H5,SERVO_TGY_CENTER,SERVO_TGY_RANGE);
 
 static SERVO_LIST PROGMEM bank1_list[] = {
 	&_servo1_,
@@ -73,6 +73,7 @@ void sysInitHardware(void){
 //	setErrorLog(&uart1SendByte);
 	//rprintfInit(&uart1SendByte);
 	uartInit(_C_uart1,115200);
+// ----------- Register the statusLED -----------
 	//segled_init(&_led_display_);
 }
 
@@ -80,7 +81,6 @@ void sysInitHardware(void){
 void initHardware(void){
 	servoPWMInit(&_bank1_);
 }
-// ----------- Register the statusLED -----------
 void registerLED(void){
 	statusLEDregister(C1,false);
 }

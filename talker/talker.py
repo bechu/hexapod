@@ -52,7 +52,7 @@ class Axon2(threading.Thread):
         return str
 
     def ping(self):
-        packet = ['a', 255]
+        packet = [1, 255]
         self.write_serial(packet)
         
     def run(self):
