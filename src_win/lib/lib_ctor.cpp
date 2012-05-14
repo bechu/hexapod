@@ -15,8 +15,8 @@ UartHW uart1(_C_uart1);
 NullStream nullStream;
 
 void __attribute__ ((constructor)) _cpp_Init_(void){
-	stdin = stdout = uart1;
-	stderr = uart1;
+//	stdin = stdout = uart1;
+//	stderr = uart1;
 }
 
 extern "C" void __cxa_pure_virtual(void){

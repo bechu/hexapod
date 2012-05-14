@@ -42,7 +42,7 @@ beta.o: beta.cpp hardware.h ../../Users/jerome/Documents/2/2.08/libdefs.h \
   ../../Users/jerome/Documents/2/2.08/uart.h \
   ../../Users/jerome/Documents/2/2.08/i2cBus.h \
   ../../Users/jerome/Documents/2/2.08/_i2c_common.h lib/lib_timerdef.h \
-  lib/lib_iopins.h lib/lib_ctor.h protocol.h services.h
+  lib/lib_iopins.h lib/lib_ctor.h protocol.h services.h smart_motor.h
 
 hardware.h:
 
@@ -143,3 +143,5 @@ lib/lib_ctor.h:
 protocol.h:
 
 services.h:
+
+smart_motor.h:

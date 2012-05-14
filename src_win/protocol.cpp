@@ -26,14 +26,17 @@ void Protocol::init(UartHW *uart)
 void Protocol::treatIO()
 {
 	_read();
+	
+	CRITICAL_SECTION{
 	if(in_offset >0 )
 {
 //_write((uint8_t*)"test\n", 5);
-
+	dump(0xFF);
 for(int i=0;i<in_offset;i++)
 	dump(in[i]);
 //_write(in, in_offset);
         	in_offset = 0;
+}
 }
     /*if(in_offset >= 2)
     {
@@ -139,7 +142,7 @@ void Protocol::_write(uint8_t *data, int size)
 uint8_t Protocol::_read()
 {
 	int c = -1;
-	CRITICAL_SECTION{
+//	CRITICAL_SECTION{
 	while(in_offset < Protocol::BUFFER_SIZE )
 	{
 		c = _uart->read();
@@ -149,7 +152,7 @@ uint8_t Protocol::_read()
 		in[in_offset] = (uint8_t)(c & 0xFF);
 		in_offset++;
 	}
-	}
+//	}
 	return 0;
 }
 
