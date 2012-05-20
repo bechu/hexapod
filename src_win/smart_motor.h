@@ -25,8 +25,10 @@ private:
 	int16_t _position;
 	int16_t _step_size;
 	uint16_t _step_count;
+	bool _firsttime;
 
-	static const int16_t SMART_SPEED = 30000;
+	void print(int16_t i);
+	static const int16_t SMART_SPEED = 15000;
 
 };
 

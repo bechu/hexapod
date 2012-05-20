@@ -3,19 +3,12 @@
 
 #include "uart.h"
 
-#define PROT_ERROR 1
-#define PROT_PING 2
-
 class Packet
 {
 public:
 	Packet();
-	
-	static const int MESSAGE_SIZE = 10;
-
-	char command;
-	char len;
-	char data[MESSAGE_SIZE];
+	char motor;
+	char pos;
 };
 
 class Protocol
@@ -23,12 +16,8 @@ class Protocol
 public:
 	Protocol();
 	void init(UartHW *uart);
-	void treatIO();
-    bool receive();
-    void send(Packet &msg);
-	Packet msg;
-//private:
-	void dump(uint8_t c);
+	int treatIO(Packet &p);
+private:
     void _write(uint8_t *data, int size);
 	uint8_t _read();
 	UartHW *_uart;

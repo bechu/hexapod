@@ -1,11 +1,9 @@
 #include "hardware.h"
 #include "protocol.h"
-#include "services.h"
 #include "smart_motor.h"
 
 
 Protocol test;
-PingService ping;
 
 SmartMotor test_motor(servo1);
 
@@ -17,21 +15,27 @@ void appInitHardware(void) {
 
 
 // Initialise the software
-TICK_COUNT appInitSoftware(TICK_COUNT loopStart){
-	//uart1.setPollingMode(false);
+TICK_COUNT appInitSoftware(TICK_COUNT loopStart) {
+
 	test.init(&uart1);
+
 	servo1.setSpeed(0);
 
-	test_motor.set_position(50,5000);
-
-    //ping.init(&test);
 	return 0;
 }
 
 
 // This is the main loop
 TICK_COUNT appControl(LOOP_COUNT loopCount, TICK_COUNT loopStart) {
-
+	Packet p;
+	int success;
+	if(test.treatIO(p) == 1)
+	{
+		if(p.motor == 1)
+		{
+			test_motor.set_position(p.pos, 1000);
+		}
+	}
 	test_motor.compute();
   	return HEXAPOD_LOOP_DURATION;
 }
