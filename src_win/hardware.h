@@ -78,7 +78,7 @@ extern HW_UART __C_uart1;
 extern const uint8_t NUM_ADC_CHANNELS;
 
 // ----------- My devices -----------------------
-#define HEXAPOD_LOOP_DURATION 100000//(us)
+#define HEXAPOD_LOOP_DURATION 20000//(us)
 #define SERVO_TGY_CENTER 1450
 #define SERVO_TGY_RANGE 850
 

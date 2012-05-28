@@ -6,8 +6,14 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_f
                               lib/lib_hardware.o (servoPWMInit)
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
                               ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o) (servoSetConfig)
+../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+                              beta.o (Stream::print(int))
+../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+                              beta.o (Stream::print(char const*))
+../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+                              beta.o (Stream::print(unsigned int))
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
-                              beta.o (__act_setSpeed)
+                              smart_motor.o (__act_setSpeed)
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
                               smart_motor.o (interpolate)
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
@@ -50,6 +56,8 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_f
                               lib/lib_hardware.o (__uartSendNextUnbuffered)
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
                               protocol.o (uartReceivePollingMode)
+../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+                              ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o) (Stream::print(char))
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
                               ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o) (clockHasElapsed)
 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
@@ -75,7 +83,11 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mems
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o) (strnlen)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
-                              smart_motor.o (itoa)
+                              protocol.o (itoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+                              ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o) (ltoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+                              ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o) (ultoa)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
                               ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o) (fprintf_P)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
@@ -87,7 +99,7 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ulto
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                              smart_motor.o (__mulsi3)
+                              lib/gen_clock.o (__mulsi3)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
                               ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o) (__udivmodhi4)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
@@ -103,11 +115,13 @@ c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o) (_exit)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                              lib/lib_hardware.o (__do_copy_data)
+                              beta.o (__do_copy_data)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
                               beta.o (__do_clear_bss)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
                               beta.o (__do_global_ctors)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+                              beta.o (__do_global_dtors)
 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o) (__tablejump__)
 
@@ -243,7 +257,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3646
+.text           0x00000000     0x409a
  *(.vectors)
  .vectors       0x00000000       0xe4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
                 0x00000000                __vectors
@@ -315,323 +329,367 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x000004ce                __ctors_end = .
                 0x000004ce                __dtors_start = .
  *(.dtors)
-                0x000004ce                __dtors_end = .
+ .dtors         0x000004ce        0x2 beta.o
+                0x000004d0                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000004ce        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
-                0x000004ce                __init
+ .init0         0x000004d0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
+                0x000004d0                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000004ce        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
+ .init2         0x000004d0        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000004da       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x000004da                __do_copy_data
- .init4         0x000004f0       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x000004f0                __do_clear_bss
+ .init4         0x000004dc       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x000004dc                __do_copy_data
+ .init4         0x000004f2       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000004f2                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x00000500       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
-                0x00000500                __do_global_ctors
+ .init6         0x00000502       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
+                0x00000502                __do_global_ctors
  *(.init6)
  *(.init7)
  *(.init7)
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000516        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
+ .init9         0x00000518        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
  *(.init9)
  *(.text)
- .text          0x0000051e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
-                0x0000051e                __vector_22
-                0x0000051e                __vector_28
-                0x0000051e                __vector_1
-                0x0000051e                __vector_32
-                0x0000051e                __vector_34
-                0x0000051e                __vector_24
-                0x0000051e                __vector_12
-                0x0000051e                __vector_55
-                0x0000051e                __vector_46
-                0x0000051e                __bad_interrupt
-                0x0000051e                __vector_6
-                0x0000051e                __vector_31
-                0x0000051e                __vector_35
-                0x0000051e                __vector_39
-                0x0000051e                __vector_3
-                0x0000051e                __vector_23
-                0x0000051e                __vector_30
-                0x0000051e                __vector_45
-                0x0000051e                __vector_25
-                0x0000051e                __vector_11
-                0x0000051e                __vector_54
-                0x0000051e                __vector_13
-                0x0000051e                __vector_17
-                0x0000051e                __vector_19
-                0x0000051e                __vector_56
-                0x0000051e                __vector_7
-                0x0000051e                __vector_49
-                0x0000051e                __vector_41
-                0x0000051e                __vector_43
-                0x0000051e                __vector_27
-                0x0000051e                __vector_5
-                0x0000051e                __vector_33
-                0x0000051e                __vector_52
-                0x0000051e                __vector_37
-                0x0000051e                __vector_4
-                0x0000051e                __vector_44
-                0x0000051e                __vector_51
-                0x0000051e                __vector_9
-                0x0000051e                __vector_2
-                0x0000051e                __vector_21
-                0x0000051e                __vector_15
-                0x0000051e                __vector_29
-                0x0000051e                __vector_40
-                0x0000051e                __vector_8
-                0x0000051e                __vector_26
-                0x0000051e                __vector_14
-                0x0000051e                __vector_53
-                0x0000051e                __vector_10
-                0x0000051e                __vector_50
-                0x0000051e                __vector_16
-                0x0000051e                __vector_18
-                0x0000051e                __vector_20
-                0x0000051e                __vector_42
- .text          0x00000522        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
- .text          0x00000522      0x178 beta.o
-                0x00000642                appInitSoftware
-                0x00000616                Actuator::setSpeed(signed char)
-                0x00000688                appInitHardware
-                0x0000058a                appControl
- .text          0x0000069a      0x34a protocol.o
-                0x0000098e                Protocol::Protocol()
-                0x000008c8                UartHW::setPollingMode(signed char)
-                0x000006be                Packet::Packet()
-                0x0000080c                Protocol::treatIO(Packet&)
-                0x000006e2                Protocol::_write(unsigned char*, int)
-                0x00000938                Protocol::Protocol()
-                0x0000069a                Packet::Packet()
-                0x000008fc                Protocol::init(UartHW*)
-                0x00000766                Protocol::_read()
- .text          0x000009e4      0x3ec smart_motor.o
-                0x00000c2a                SmartMotor::compute()
-                0x000009e4                SmartMotor::SmartMotor(Servo&)
-                0x00000ad2                SmartMotor::is_moving()
-                0x00000d10                SmartMotor::print(int)
-                0x00000a42                SmartMotor::SmartMotor(Servo&)
-                0x00000b02                SmartMotor::set_position(signed char, int)
-                0x00000aa0                SmartMotor::set_limit(signed char, signed char)
-                0x00000ce0                Uart::write(unsigned char)
- .text          0x00000dd0      0x114 lib/lib_hardware.o
-                0x00000e80                __vector_38
-                0x00000e00                initHardware
-                0x00000ecc                uart1GetByte
-                0x00000dde                registerLED
-                0x00000ed6                uart1SendByte
-                0x00000e2a                __vector_36
-                0x00000e0a                sysInitHardware
- .text          0x00000ee4        0x0 lib/lib_timerdef.o
- .text          0x00000ee4      0x1ba lib/gen_clock.o
-                0x00000fca                __clockInit
-                0x00000f48                clockSnapshotToTicks
-                0x00000ee4                clockGetSnapshot
-                0x00000fd8                __vector_47
-                0x00000f90                clockGetus
- .text          0x0000109e        0x0 lib/lib_iopins.o
- .text          0x0000109e      0x1ea lib/lib_ctor.o
-                0x00001216                StatusLed::set(signed char) const
-                0x000010f6                _cpp_Init_()
-                0x000010ea                NullStream::read()
-                0x000010e4                NullStream::write(unsigned char)
-                0x000010f8                __cxa_pure_virtual
-                0x0000109e                Stream::_put(char, __file*)
-                0x000010f0                Marquee::read()
-                0x00001244                Marquee::write(unsigned char)
-                0x00001252                UartHW::read()
-                0x00001238                Led::set(signed char) const
-                0x0000126e                Uart::read()
-                0x000010c4                Stream::_get(__file*)
- .text          0x00001288       0x7a lib/lib_timers.o
-                0x00001288                __initTimers
- .text          0x00001302      0x138 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
-                0x00001302                servoPWMInit
- .text          0x0000143a      0x102 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
-                0x0000143a                servoSetConfig
- .text          0x0000153c       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
-                0x0000153c                __act_setSpeed
-                0x0000157c                __act_setConnected
- .text          0x000015b2       0x8e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
-                0x000015b2                interpolate
- .text          0x00001640       0x82 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
-                0x00001640                interpolateU
- .text          0x000016c2       0xd6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
-                0x000016c8                setErrorLog
-                0x000016d2                setError
-                0x000016c2                getError
- .text          0x00001798       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
-                0x00001798                pin_is_output
- .text          0x000017c2       0x4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
-                0x000017c2                pin_make_input
- .text          0x00001810       0x4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
-                0x00001810                pin_make_output
- .text          0x0000185e       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
-                0x0000185e                LED_set
- .text          0x000018a2       0xd0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
-                0x000018a2                main
- .text          0x00001972      0x2ba ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
-                0x00001972                marqueeSendByte
- .text          0x00001c2c      0x10c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
-                0x00001c2c                segled_put_char
-                0x00001cc2                segled_set
- .text          0x00001d38       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
-                0x00001d38                segled8_get_mask
- .text          0x00001dae       0x98 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
-                0x00001dae                compareFromIOPin
- .text          0x00001e46       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
-                0x00001e46                compareSetOutputMode
- .text          0x00001e8a       0x6a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
-                0x00001e8a                compareSetThreshold
- .text          0x00001ef4       0xa4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
-                0x00001ef4                _uartSetBaudRate
-                0x00001f0c                _uartInit
- .text          0x00001f98      0x1dc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
-                0x00001f98                __uartHWSetBaudRate
-                0x00002104                __uartHWStartXmit
-                0x0000213c                __uartHWInit
- .text          0x00002174       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
-                0x000021a8                __uartGetByte
-                0x00002174                __uartReceiveService
- .text          0x000021b4       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
-                0x000021cc                __uartReceiveUnbuffered
-                0x000021b4                __uartGetByteUnbuffered
- .text          0x000021f0       0xe6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
-                0x000022b6                _uartSendByte
-                0x0000227a                _uartSendBuffer
-                0x00002242                _uartTransmitBlockEnd
-                0x000022ca                __uartTransmitService
-                0x000021f0                _uartStartXmit
-                0x0000220a                _uartTransmitBlockStart
- .text          0x000022d6       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
-                0x000022e6                __uartSendUnbuffered
-                0x000022d6                __uartSendNextUnbuffered
- .text          0x0000231c       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
-                0x00002338                uartPollByte
-                0x0000231c                uartReceivePollingMode
- .text          0x00002360       0x12 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
-                0x00002360                clockHasElapsed
- .text          0x00002372       0x84 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
-                0x00002372                clockHasElapsedGetOverflow
- .text          0x000023f6       0x16 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
-                0x000023f6                breathe
- .text          0x0000240c       0x92 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
-                0x00002456                pin_high
-                0x0000240c                pin_low
- .text          0x0000249e       0x10 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
-                0x0000249e                pin_set
- .text          0x000024ae      0x35c lib\libPost.a(opt_scheduler.o)
-                0x000026d8                scheduleJob
-                0x00002690                __vector_48
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
- .text          0x0000280a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
-                0x0000280a                . = ALIGN (0x2)
+ .text          0x00000520        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
+                0x00000520                __vector_22
+                0x00000520                __vector_28
+                0x00000520                __vector_1
+                0x00000520                __vector_32
+                0x00000520                __vector_34
+                0x00000520                __vector_24
+                0x00000520                __vector_12
+                0x00000520                __vector_55
+                0x00000520                __vector_46
+                0x00000520                __bad_interrupt
+                0x00000520                __vector_6
+                0x00000520                __vector_31
+                0x00000520                __vector_35
+                0x00000520                __vector_39
+                0x00000520                __vector_3
+                0x00000520                __vector_23
+                0x00000520                __vector_30
+                0x00000520                __vector_45
+                0x00000520                __vector_25
+                0x00000520                __vector_11
+                0x00000520                __vector_54
+                0x00000520                __vector_13
+                0x00000520                __vector_17
+                0x00000520                __vector_19
+                0x00000520                __vector_56
+                0x00000520                __vector_7
+                0x00000520                __vector_49
+                0x00000520                __vector_41
+                0x00000520                __vector_43
+                0x00000520                __vector_27
+                0x00000520                __vector_5
+                0x00000520                __vector_33
+                0x00000520                __vector_52
+                0x00000520                __vector_37
+                0x00000520                __vector_4
+                0x00000520                __vector_44
+                0x00000520                __vector_51
+                0x00000520                __vector_9
+                0x00000520                __vector_2
+                0x00000520                __vector_21
+                0x00000520                __vector_15
+                0x00000520                __vector_29
+                0x00000520                __vector_40
+                0x00000520                __vector_8
+                0x00000520                __vector_26
+                0x00000520                __vector_14
+                0x00000520                __vector_53
+                0x00000520                __vector_10
+                0x00000520                __vector_50
+                0x00000520                __vector_16
+                0x00000520                __vector_18
+                0x00000520                __vector_20
+                0x00000520                __vector_42
+ .text          0x00000524        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
+ .text          0x00000524      0x3e2 beta.o
+                0x0000089c                appInitSoftware
+                0x000006aa                treat_packet(Packet&)
+                0x0000067a                Stream::operator<<(unsigned int)
+                0x0000061a                Stream::operator<<(int)
+                0x000008f4                appInitHardware
+                0x0000064a                Stream::operator<<(char const*)
+                0x000007e8                appControl
+ .text          0x00000906      0x802 protocol.o
+                0x00000c46                Protocol::forge(Packet&)
+                0x0000097a                Protocol::send(Packet&)
+                0x000010b2                Protocol::Protocol()
+                0x00000fec                UartHW::setPollingMode(signed char)
+                0x00000940                Packet::Packet()
+                0x00000d9a                Protocol::treatIO(Packet&)
+                0x00000abc                Protocol::_write(unsigned char*, int)
+                0x0000105c                Protocol::Protocol()
+                0x00000906                Packet::Packet()
+                0x00001020                Protocol::init(UartHW*)
+                0x00000b40                Protocol::_read()
+                0x00000d72                Stream::operator<<(unsigned char)
+                0x00000ee0                Protocol::print(int)
+ .text          0x00001108      0x49a smart_motor.o
+                0x00001198                SmartMotor::~SmartMotor()
+                0x000013fc                SmartMotor::compute()
+                0x00001150                SmartMotor::SmartMotor()
+                0x000011c8                SmartMotor::link_servo(Servo&)
+                0x000013d0                Actuator::setSpeed(signed char)
+                0x00001258                SmartMotor::is_moving()
+                0x000014e2                SmartMotor::print(int)
+                0x00001288                SmartMotor::stop_motion()
+                0x00001228                SmartMotor::get_position(signed char&)
+                0x000011b0                SmartMotor::~SmartMotor()
+                0x000012a8                SmartMotor::set_position(signed char, int)
+                0x000011f6                SmartMotor::set_limit(signed char, signed char)
+                0x000014b2                Uart::write(unsigned char)
+                0x00001108                SmartMotor::SmartMotor()
+ .text          0x000015a2      0x114 lib/lib_hardware.o
+                0x00001652                __vector_38
+                0x000015d2                initHardware
+                0x0000169e                uart1GetByte
+                0x000015b0                registerLED
+                0x000016a8                uart1SendByte
+                0x000015fc                __vector_36
+                0x000015dc                sysInitHardware
+ .text          0x000016b6        0x0 lib/lib_timerdef.o
+ .text          0x000016b6      0x1ba lib/gen_clock.o
+                0x0000179c                __clockInit
+                0x0000171a                clockSnapshotToTicks
+                0x000016b6                clockGetSnapshot
+                0x000017aa                __vector_47
+                0x00001762                clockGetus
+ .text          0x00001870        0x0 lib/lib_iopins.o
+ .text          0x00001870      0x1ea lib/lib_ctor.o
+                0x000019e8                StatusLed::set(signed char) const
+                0x000018c8                _cpp_Init_()
+                0x000018bc                NullStream::read()
+                0x000018b6                NullStream::write(unsigned char)
+                0x000018ca                __cxa_pure_virtual
+                0x00001870                Stream::_put(char, __file*)
+                0x000018c2                Marquee::read()
+                0x00001a16                Marquee::write(unsigned char)
+                0x00001a24                UartHW::read()
+                0x00001a0a                Led::set(signed char) const
+                0x00001a40                Uart::read()
+                0x00001896                Stream::_get(__file*)
+ .text          0x00001a5a       0x7a lib/lib_timers.o
+                0x00001a5a                __initTimers
+ .text          0x00001ad4      0x138 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+                0x00001ad4                servoPWMInit
+ .text          0x00001c0c      0x102 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+                0x00001c0c                servoSetConfig
+ .text          0x00001d0e       0xb4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+                0x00001d0e                Stream::print(long, unsigned char)
+                0x00001d64                Stream::print(int, unsigned char)
+                0x00001d74                Stream::print(int)
+                0x00001d5c                Stream::print(long)
+                0x00001d9a                Stream::print(signed char, unsigned char)
+                0x00001d86                Stream::print(signed char)
+ .text          0x00001dc2       0x2c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+                0x00001dc2                Stream::print(char const*)
+ .text          0x00001dee       0xa4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+                0x00001e3c                Stream::print(unsigned long)
+                0x00001dee                Stream::print(unsigned long, unsigned char)
+                0x00001e5e                Stream::print(unsigned char)
+                0x00001e6e                Stream::print(unsigned char, unsigned char)
+                0x00001e44                Stream::print(unsigned int, unsigned char)
+                0x00001e50                Stream::print(unsigned int)
+ .text          0x00001e92       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+                0x00001e92                __act_setSpeed
+                0x00001ed2                __act_setConnected
+ .text          0x00001f08       0x8e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+                0x00001f08                interpolate
+ .text          0x00001f96       0x82 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+                0x00001f96                interpolateU
+ .text          0x00002018       0xd6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+                0x0000201e                setErrorLog
+                0x00002028                setError
+                0x00002018                getError
+ .text          0x000020ee       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+                0x000020ee                pin_is_output
+ .text          0x00002118       0x4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+                0x00002118                pin_make_input
+ .text          0x00002166       0x4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+                0x00002166                pin_make_output
+ .text          0x000021b4       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+                0x000021b4                LED_set
+ .text          0x000021f8       0xd0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+                0x000021f8                main
+ .text          0x000022c8      0x2ba ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+                0x000022c8                marqueeSendByte
+ .text          0x00002582      0x10c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+                0x00002582                segled_put_char
+                0x00002618                segled_set
+ .text          0x0000268e       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+                0x0000268e                segled8_get_mask
+ .text          0x00002704       0x98 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+                0x00002704                compareFromIOPin
+ .text          0x0000279c       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+                0x0000279c                compareSetOutputMode
+ .text          0x000027e0       0x6a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+                0x000027e0                compareSetThreshold
+ .text          0x0000284a       0xa4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+                0x0000284a                _uartSetBaudRate
+                0x00002862                _uartInit
+ .text          0x000028ee      0x1dc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+                0x000028ee                __uartHWSetBaudRate
+                0x00002a5a                __uartHWStartXmit
+                0x00002a92                __uartHWInit
+ .text          0x00002aca       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+                0x00002afe                __uartGetByte
+                0x00002aca                __uartReceiveService
+ .text          0x00002b0a       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+                0x00002b22                __uartReceiveUnbuffered
+                0x00002b0a                __uartGetByteUnbuffered
+ .text          0x00002b46       0xe6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+                0x00002c0c                _uartSendByte
+                0x00002bd0                _uartSendBuffer
+                0x00002b98                _uartTransmitBlockEnd
+                0x00002c20                __uartTransmitService
+                0x00002b46                _uartStartXmit
+                0x00002b60                _uartTransmitBlockStart
+ .text          0x00002c2c       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+                0x00002c3c                __uartSendUnbuffered
+                0x00002c2c                __uartSendNextUnbuffered
+ .text          0x00002c72       0x44 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+                0x00002c8e                uartPollByte
+                0x00002c72                uartReceivePollingMode
+ .text          0x00002cb6       0x36 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+                0x00002cb6                Stream::print(char)
+ .text          0x00002cec       0x12 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+                0x00002cec                clockHasElapsed
+ .text          0x00002cfe       0x84 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+                0x00002cfe                clockHasElapsedGetOverflow
+ .text          0x00002d82       0x16 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+                0x00002d82                breathe
+ .text          0x00002d98       0x92 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+                0x00002de2                pin_high
+                0x00002d98                pin_low
+ .text          0x00002e2a       0x10 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+                0x00002e2a                pin_set
+ .text          0x00002e3a      0x35c lib\libPost.a(opt_scheduler.o)
+                0x00003064                scheduleJob
+                0x0000301c                __vector_48
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+ .text          0x00003196        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
+                0x00003196                . = ALIGN (0x2)
  *(.text.*)
  .text.avr-libc
-                0x0000280a      0x70e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
-                0x0000280a                vfprintf
+                0x00003196      0x70e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
+                0x00003196                vfprintf
  .text.avr-libc
-                0x00002f18      0x20a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x00002f18                malloc
-                0x00003072                free
+                0x000038a4      0x20a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x000038a4                malloc
+                0x000039fe                free
  .text.avr-libc
-                0x00003122        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
-                0x00003122                exit
+                0x00003aae        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x00003aae                exit
  .text.avr-libc
-                0x00003128      0x1b0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
-                0x00003128                __ftoa_engine
+                0x00003ab4      0x1b0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+                0x00003ab4                __ftoa_engine
  .text.avr-libc
-                0x000032d8       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x000032d8                strnlen_P
+                0x00003c64       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x00003c64                strnlen_P
  .text.avr-libc
-                0x000032ee        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
-                0x000032ee                memset
+                0x00003c7a        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00003c7a                memset
  .text.avr-libc
-                0x000032fc       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x000032fc                strnlen
+                0x00003c88       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x00003c88                strnlen
  .text.avr-libc
-                0x00003312       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
-                0x00003312                itoa
+                0x00003c9e       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x00003c9e                itoa
  .text.avr-libc
-                0x00003354       0x3a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
-                0x00003354                fprintf_P
+                0x00003ce0       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+                0x00003ce0                ltoa
  .text.avr-libc
-                0x0000338e       0x58 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x0000338e                fputc
+                0x00003d48       0x4a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+                0x00003d48                ultoa
  .text.avr-libc
-                0x000033e6       0xbc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x000033e6                __ultoa_invert
+                0x00003d92       0x3a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
+                0x00003d92                fprintf_P
  .text.avr-libc
-                0x000034a2       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
-                0x000034a2                strrev
- .text.libgcc   0x000034c2       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x000034c2                __mulsi3
- .text.libgcc   0x00003500       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00003500                __udivmodhi4
- .text.libgcc   0x00003528       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
-                0x00003528                __divmodhi4
-                0x00003528                _div
- .text.libgcc   0x0000354e       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000354e                __udivmodsi4
- .text.libgcc   0x00003592       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
-                0x00003592                __divmodsi4
- .text.libgcc   0x000035c8       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000035c8                __prologue_saves__
- .text.libgcc   0x00003600       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00003600                __epilogue_restores__
- .text.libgcc   0x00003636        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00003636        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00003636        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003636        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
- .text.libgcc   0x00003636        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
-                0x0000363a                __tablejump__
-                0x00003636                __tablejump2__
-                0x00003642                . = ALIGN (0x2)
+                0x00003dcc       0x58 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x00003dcc                fputc
+ .text.avr-libc
+                0x00003e24       0xbc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x00003e24                __ultoa_invert
+ .text.avr-libc
+                0x00003ee0       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00003ee0                strrev
+ .text.libgcc   0x00003f00       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00003f00                __mulsi3
+ .text.libgcc   0x00003f3e       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00003f3e                __udivmodhi4
+ .text.libgcc   0x00003f66       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00003f66                __divmodhi4
+                0x00003f66                _div
+ .text.libgcc   0x00003f8c       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003f8c                __udivmodsi4
+ .text.libgcc   0x00003fd0       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+                0x00003fd0                __divmodsi4
+ .text.libgcc   0x00004006       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00004006                __prologue_saves__
+ .text.libgcc   0x0000403e       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000403e                __epilogue_restores__
+ .text.libgcc   0x00004074        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00004074        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00004074        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00004074        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
+ .text.libgcc   0x00004074        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+ .text.libgcc   0x00004074        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
+                0x00004078                __tablejump__
+                0x00004074                __tablejump2__
+                0x00004080                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003642        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003642                _exit
+ .fini9         0x00004080        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00004080                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
+ .fini6         0x00004080       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+                0x00004080                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -644,210 +702,225 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003642        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00004096        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003646                _etext = .
+                0x0000409a                _etext = .
 
-.data           0x00800200       0xee load address 0x00003646
+.data           0x00800200      0x11c load address 0x0000409a
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
  .data          0x00800200        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
- .data          0x00800200        0x0 beta.o
- .data          0x00800200        0x0 protocol.o
- .data          0x00800200        0x0 smart_motor.o
- .data          0x00800200       0xb2 lib/lib_hardware.o
-                0x0080027a                _servo2_
-                0x00800208                __C_uart1
-                0x00800264                _servo1_
-                0x0080023c                _led_display_
-                0x0080023a                _button_
-                0x008002a6                _bank1_
-                0x0080024d                _marquee_
-                0x00800200                cpu_speed
-                0x00800290                _servo3_
-                0x00800239                NUM_ADC_CHANNELS
-                0x00800206                cpu_speed_div_1000000
-                0x00800204                cpu_speed_div_1000
- .data          0x008002b2        0x1 lib/lib_timerdef.o
-                0x008002b2                NUMBER_OF_TIMERS
- .data          0x008002b3        0x0 lib/gen_clock.o
- .data          0x008002b3        0x0 lib/lib_iopins.o
- .data          0x008002b3       0x34 lib/lib_ctor.o
-                0x008002bf                vtable for Marquee
-                0x008002cf                vtable for UartHW
-                0x008002b9                vtable for Led
-                0x008002df                vtable for NullStream
-                0x008002d7                vtable for Uart
-                0x008002c7                vtable for Stream
-                0x008002b3                vtable for StatusLed
- .data          0x008002e7        0x0 lib/lib_timers.o
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .data          0x008002e7        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .data          0x008002e7        0x1 lib\libPost.a(opt_scheduler.o)
-                0x008002e7                maxJobs
- .data          0x008002e8        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x008002ea                __malloc_heap_start
-                0x008002ec                __malloc_heap_end
-                0x008002e8                __malloc_margin
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
- .data          0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
+ .data          0x00800200       0x17 beta.o
+ .data          0x00800217       0x16 protocol.o
+ .data          0x0080022d        0x0 smart_motor.o
+ .data          0x0080022d       0xb2 lib/lib_hardware.o
+                0x008002a7                _servo2_
+                0x00800235                __C_uart1
+                0x00800291                _servo1_
+                0x00800269                _led_display_
+                0x00800267                _button_
+                0x008002d3                _bank1_
+                0x0080027a                _marquee_
+                0x0080022d                cpu_speed
+                0x008002bd                _servo3_
+                0x00800266                NUM_ADC_CHANNELS
+                0x00800233                cpu_speed_div_1000000
+                0x00800231                cpu_speed_div_1000
+ .data          0x008002df        0x1 lib/lib_timerdef.o
+                0x008002df                NUMBER_OF_TIMERS
+ .data          0x008002e0        0x0 lib/gen_clock.o
+ .data          0x008002e0        0x0 lib/lib_iopins.o
+ .data          0x008002e0       0x34 lib/lib_ctor.o
+                0x008002ec                vtable for Marquee
+                0x008002fc                vtable for UartHW
+                0x008002e6                vtable for Led
+                0x0080030c                vtable for NullStream
+                0x00800304                vtable for Uart
+                0x008002f4                vtable for Stream
+                0x008002e0                vtable for StatusLed
+ .data          0x00800314        0x0 lib/lib_timers.o
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .data          0x00800314        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .data          0x00800314        0x1 lib\libPost.a(opt_scheduler.o)
+                0x00800314                maxJobs
+ .data          0x00800315        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800317                __malloc_heap_start
+                0x00800319                __malloc_heap_end
+                0x00800315                __malloc_margin
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+ .data          0x0080031b        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008002ee                . = ALIGN (0x2)
-                0x008002ee                _edata = .
-                0x008002ee                PROVIDE (__data_end, .)
+                0x0080031c                . = ALIGN (0x2)
+ *fill*         0x0080031b        0x1 00
+                0x0080031c                _edata = .
+                0x0080031c                PROVIDE (__data_end, .)
 
-.bss            0x008002ee      0x13d
-                0x008002ee                PROVIDE (__bss_start, .)
+.bss            0x0080031c      0x148
+                0x0080031c                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
- .bss           0x008002ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
- .bss           0x008002ee       0x38 beta.o
-                0x0080031b                test_motor
-                0x008002ee                test
- .bss           0x00800326        0x0 protocol.o
- .bss           0x00800326        0x0 smart_motor.o
- .bss           0x00800326        0x0 lib/lib_hardware.o
- .bss           0x00800326       0x82 lib/lib_timerdef.o
- .bss           0x008003a8        0x5 lib/gen_clock.o
- .bss           0x008003ad        0x0 lib/lib_iopins.o
- .bss           0x008003ad       0x4f lib/lib_ctor.o
-                0x008003d1                bank1
-                0x008003ad                statusLed
-                0x008003ec                nullStream
-                0x008003d3                uart1
-                0x008003b1                button
-                0x008003b3                marquee
-                0x008003cd                servo3
-                0x008003c5                servo1
-                0x008003c9                servo2
- .bss           0x008003fc        0x0 lib/lib_timers.o
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .bss           0x008003fc        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .bss           0x008003fc        0xc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .bss           0x00800408        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .bss           0x00800408       0x11 lib\libPost.a(opt_scheduler.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
- .bss           0x00800419        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
+ .bss           0x0080031c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm640.o
+ .bss           0x0080031c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x0080031c       0x43 beta.o
+                0x0080031c                proto
+                0x00800349                motors
+ .bss           0x0080035f        0x0 protocol.o
+ .bss           0x0080035f        0x0 smart_motor.o
+ .bss           0x0080035f        0x0 lib/lib_hardware.o
+ .bss           0x0080035f       0x82 lib/lib_timerdef.o
+ .bss           0x008003e1        0x5 lib/gen_clock.o
+ .bss           0x008003e6        0x0 lib/lib_iopins.o
+ .bss           0x008003e6       0x4f lib/lib_ctor.o
+                0x0080040a                bank1
+                0x008003e6                statusLed
+                0x00800425                nullStream
+                0x0080040c                uart1
+                0x008003ea                button
+                0x008003ec                marquee
+                0x00800406                servo3
+                0x008003fe                servo1
+                0x00800402                servo2
+ .bss           0x00800435        0x0 lib/lib_timers.o
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .bss           0x00800435        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .bss           0x00800435        0xc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .bss           0x00800441        0x0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .bss           0x00800441       0x11 lib\libPost.a(opt_scheduler.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(exit.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ltoa.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fprintf_p.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodsi4.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ctors.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_dtors.o)
+ .bss           0x00800452        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_tablejump.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800419        0x5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
-                0x00800419                __error
- COMMON         0x0080041e        0x3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
-                0x0080041e                statusLED
- COMMON         0x00800421        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x00800421                __brkval
-                0x00800423                __flp
- COMMON         0x00800425        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
-                0x00800425                __iob
-                0x0080042b                PROVIDE (__bss_end, .)
-                0x00003646                __data_load_start = LOADADDR (.data)
-                0x00003734                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800452        0x5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+                0x00800452                __error
+ COMMON         0x00800457        0x3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+                0x00800457                statusLED
+ COMMON         0x0080045a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x0080045a                __brkval
+                0x0080045c                __flp
+ COMMON         0x0080045e        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(iob.o)
+                0x0080045e                __iob
+                0x00800464                PROVIDE (__bss_end, .)
+                0x0000409a                __data_load_start = LOADADDR (.data)
+                0x000041b6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080042b        0x0
-                0x0080042b                PROVIDE (__noinit_start, .)
+.noinit         0x00800464        0x0
+                0x00800464                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080042b                PROVIDE (__noinit_end, .)
-                0x0080042b                _end = .
-                0x0080042b                PROVIDE (__heap_start, .)
+                0x00800464                PROVIDE (__noinit_end, .)
+                0x00800464                _end = .
+                0x00800464                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -898,7 +971,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x4a0
+.debug_aranges  0x00000000      0x520
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 beta.o
@@ -919,393 +992,433 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .debug_aranges
                 0x00000100       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
  .debug_aranges
-                0x00000120       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+                0x00000120       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
  .debug_aranges
-                0x00000140       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+                0x00000140       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
  .debug_aranges
-                0x00000160       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+                0x00000160       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
  .debug_aranges
-                0x00000180       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+                0x00000180       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
  .debug_aranges
-                0x000001a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+                0x000001a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
  .debug_aranges
-                0x000001c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+                0x000001c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
  .debug_aranges
-                0x000001e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+                0x000001e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
  .debug_aranges
-                0x00000200       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+                0x00000200       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
  .debug_aranges
-                0x00000220       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+                0x00000220       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
  .debug_aranges
-                0x00000240       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+                0x00000240       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
  .debug_aranges
-                0x00000260       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+                0x00000260       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
  .debug_aranges
-                0x00000280       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+                0x00000280       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
  .debug_aranges
-                0x000002a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+                0x000002a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
  .debug_aranges
-                0x000002c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+                0x000002c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
  .debug_aranges
-                0x000002e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+                0x000002e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
  .debug_aranges
-                0x00000300       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+                0x00000300       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
  .debug_aranges
-                0x00000320       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+                0x00000320       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
  .debug_aranges
-                0x00000340       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+                0x00000340       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
  .debug_aranges
-                0x00000360       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+                0x00000360       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
  .debug_aranges
-                0x00000380       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+                0x00000380       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
  .debug_aranges
-                0x000003a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+                0x000003a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
  .debug_aranges
-                0x000003c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+                0x000003c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
  .debug_aranges
-                0x000003e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+                0x000003e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
  .debug_aranges
-                0x00000400       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+                0x00000400       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
  .debug_aranges
-                0x00000420       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+                0x00000420       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
  .debug_aranges
-                0x00000440       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+                0x00000440       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
  .debug_aranges
-                0x00000460       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+                0x00000460       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
  .debug_aranges
-                0x00000480       0x20 lib\libPost.a(opt_scheduler.o)
+                0x00000480       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_aranges
+                0x000004a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_aranges
+                0x000004c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_aranges
+                0x000004e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_aranges
+                0x00000500       0x20 lib\libPost.a(opt_scheduler.o)
 
 .debug_pubnames
-                0x00000000      0xd2b
+                0x00000000      0xfb7
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0x78 beta.o
+                0x00000000       0xb4 beta.o
  .debug_pubnames
-                0x00000078       0xd3 protocol.o
+                0x000000b4      0x153 protocol.o
  .debug_pubnames
-                0x0000014b       0xee smart_motor.o
+                0x00000207      0x17a smart_motor.o
  .debug_pubnames
-                0x00000239      0x14c lib/lib_hardware.o
+                0x00000381      0x14c lib/lib_hardware.o
  .debug_pubnames
-                0x00000385       0xae lib/lib_timerdef.o
+                0x000004cd       0xae lib/lib_timerdef.o
  .debug_pubnames
-                0x00000433       0x6f lib/gen_clock.o
+                0x0000057b       0x6f lib/gen_clock.o
  .debug_pubnames
-                0x000004a2      0x106 lib/lib_iopins.o
+                0x000005ea      0x106 lib/lib_iopins.o
  .debug_pubnames
-                0x000005a8      0x163 lib/lib_ctor.o
+                0x000006f0      0x163 lib/lib_ctor.o
  .debug_pubnames
-                0x0000070b       0x23 lib/lib_timers.o
+                0x00000853       0x23 lib/lib_timers.o
  .debug_pubnames
-                0x0000072e       0x23 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+                0x00000876       0x23 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
  .debug_pubnames
-                0x00000751       0x25 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+                0x00000899       0x25 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
  .debug_pubnames
-                0x00000776       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+                0x000008be       0x7e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
  .debug_pubnames
-                0x000007b2       0x22 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+                0x0000093c       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
  .debug_pubnames
-                0x000007d4       0x23 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+                0x00000960       0x7e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
  .debug_pubnames
-                0x000007f7       0x48 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+                0x000009de       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
  .debug_pubnames
-                0x0000083f       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+                0x00000a1a       0x22 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
  .debug_pubnames
-                0x00000863       0x25 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+                0x00000a3c       0x23 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
  .debug_pubnames
-                0x00000888       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+                0x00000a5f       0x48 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
  .debug_pubnames
-                0x000008ae       0x2c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+                0x00000aa7       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
  .debug_pubnames
-                0x000008da       0x1b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+                0x00000acb       0x25 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
  .debug_pubnames
-                0x000008f5       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+                0x00000af0       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
  .debug_pubnames
-                0x0000091b       0x35 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+                0x00000b16       0x2c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
  .debug_pubnames
-                0x00000950       0x27 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+                0x00000b42       0x1b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
  .debug_pubnames
-                0x00000977       0x27 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+                0x00000b5d       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
  .debug_pubnames
-                0x0000099e       0x2b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+                0x00000b83       0x35 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
  .debug_pubnames
-                0x000009c9       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+                0x00000bb8       0x27 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
  .debug_pubnames
-                0x000009f3       0x35 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+                0x00000bdf       0x27 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
  .debug_pubnames
-                0x00000a28       0x5f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+                0x00000c06       0x2b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
  .debug_pubnames
-                0x00000a87       0x3d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+                0x00000c31       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
  .debug_pubnames
-                0x00000ac4       0x4a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+                0x00000c5b       0x35 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
  .debug_pubnames
-                0x00000b0e       0x9b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+                0x00000c90       0x5f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
  .debug_pubnames
-                0x00000ba9       0x48 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+                0x00000cef       0x3d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
  .debug_pubnames
-                0x00000bf1       0x3e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+                0x00000d2c       0x4a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
  .debug_pubnames
-                0x00000c2f       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+                0x00000d76       0x9b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
  .debug_pubnames
-                0x00000c55       0x31 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+                0x00000e11       0x48 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
  .debug_pubnames
-                0x00000c86       0x1e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+                0x00000e59       0x3e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
  .debug_pubnames
-                0x00000ca4       0x2b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+                0x00000e97       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
  .debug_pubnames
-                0x00000ccf       0x1e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+                0x00000ebb       0x26 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
  .debug_pubnames
-                0x00000ced       0x3e lib\libPost.a(opt_scheduler.o)
+                0x00000ee1       0x31 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_pubnames
+                0x00000f12       0x1e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_pubnames
+                0x00000f30       0x2b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_pubnames
+                0x00000f5b       0x1e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_pubnames
+                0x00000f79       0x3e lib\libPost.a(opt_scheduler.o)
 
-.debug_info     0x00000000    0x11641
+.debug_info     0x00000000    0x144e8
  *(.debug_info)
- .debug_info    0x00000000     0x1c67 beta.o
- .debug_info    0x00001c67     0x139f protocol.o
- .debug_info    0x00003006     0x1c13 smart_motor.o
- .debug_info    0x00004c19     0x1101 lib/lib_hardware.o
- .debug_info    0x00005d1a      0x804 lib/lib_timerdef.o
- .debug_info    0x0000651e      0x335 lib/gen_clock.o
- .debug_info    0x00006853      0x3c3 lib/lib_iopins.o
- .debug_info    0x00006c16     0x261b lib/lib_ctor.o
- .debug_info    0x00009231      0x540 lib/lib_timers.o
- .debug_info    0x00009771      0xd62 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .debug_info    0x0000a4d3      0xb4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .debug_info    0x0000b021      0x274 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .debug_info    0x0000b295      0x106 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .debug_info    0x0000b39b      0x11c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .debug_info    0x0000b4b7      0x43d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .debug_info    0x0000b8f4      0x212 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .debug_info    0x0000bb06      0x2d4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .debug_info    0x0000bdda      0x2d4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .debug_info    0x0000c0ae      0x1de ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .debug_info    0x0000c28c       0xd7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .debug_info    0x0000c363      0x608 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .debug_info    0x0000c96b      0x346 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .debug_info    0x0000ccb1      0x193 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .debug_info    0x0000ce44      0x5c5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .debug_info    0x0000d409      0x444 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .debug_info    0x0000d84d      0x56b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .debug_info    0x0000ddb8      0x648 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .debug_info    0x0000e400      0x7c4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .debug_info    0x0000ebc4      0x51a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .debug_info    0x0000f0de      0x5a3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .debug_info    0x0000f681      0x6fa ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .debug_info    0x0000fd7b      0x62e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .debug_info    0x000103a9      0x5a2 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .debug_info    0x0001094b       0xce ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .debug_info    0x00010a19      0x147 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .debug_info    0x00010b60      0x102 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .debug_info    0x00010c62      0x400 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .debug_info    0x00011062      0x179 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .debug_info    0x000111db      0x466 lib\libPost.a(opt_scheduler.o)
+ .debug_info    0x00000000     0x1e5b beta.o
+ .debug_info    0x00001e5b     0x1876 protocol.o
+ .debug_info    0x000036d1     0x1d52 smart_motor.o
+ .debug_info    0x00005423     0x1101 lib/lib_hardware.o
+ .debug_info    0x00006524      0x804 lib/lib_timerdef.o
+ .debug_info    0x00006d28      0x335 lib/gen_clock.o
+ .debug_info    0x0000705d      0x3c3 lib/lib_iopins.o
+ .debug_info    0x00007420     0x261b lib/lib_ctor.o
+ .debug_info    0x00009a3b      0x540 lib/lib_timers.o
+ .debug_info    0x00009f7b      0xd62 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .debug_info    0x0000acdd      0xb4e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .debug_info    0x0000b82b      0xa47 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .debug_info    0x0000c272      0x90f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .debug_info    0x0000cb81      0xa47 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .debug_info    0x0000d5c8      0x274 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_info    0x0000d83c      0x106 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_info    0x0000d942      0x11c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_info    0x0000da5e      0x43d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .debug_info    0x0000de9b      0x212 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_info    0x0000e0ad      0x2d4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_info    0x0000e381      0x2d4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_info    0x0000e655      0x1de ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_info    0x0000e833       0xd7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .debug_info    0x0000e90a      0x608 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_info    0x0000ef12      0x346 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_info    0x0000f258      0x193 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_info    0x0000f3eb      0x5c5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_info    0x0000f9b0      0x444 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_info    0x0000fdf4      0x56b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_info    0x0001035f      0x648 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_info    0x000109a7      0x7c4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_info    0x0001116b      0x51a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_info    0x00011685      0x5a3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_info    0x00011c28      0x6fa ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_info    0x00012322      0x62e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_info    0x00012950      0x5a2 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_info    0x00012ef2      0x900 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .debug_info    0x000137f2       0xce ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_info    0x000138c0      0x147 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_info    0x00013a07      0x102 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_info    0x00013b09      0x400 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_info    0x00013f09      0x179 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_info    0x00014082      0x466 lib\libPost.a(opt_scheduler.o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000     0x43b8
+.debug_abbrev   0x00000000     0x4ce3
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x47e beta.o
- .debug_abbrev  0x0000047e      0x42d protocol.o
- .debug_abbrev  0x000008ab      0x44a smart_motor.o
- .debug_abbrev  0x00000cf5      0x285 lib/lib_hardware.o
- .debug_abbrev  0x00000f7a      0x107 lib/lib_timerdef.o
- .debug_abbrev  0x00001081      0x1a8 lib/gen_clock.o
- .debug_abbrev  0x00001229       0xc8 lib/lib_iopins.o
- .debug_abbrev  0x000012f1      0x579 lib/lib_ctor.o
- .debug_abbrev  0x0000186a      0x177 lib/lib_timers.o
- .debug_abbrev  0x000019e1      0x272 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .debug_abbrev  0x00001c53      0x23d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .debug_abbrev  0x00001e90      0x10b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .debug_abbrev  0x00001f9b       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .debug_abbrev  0x0000200e       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .debug_abbrev  0x00002081      0x1e1 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .debug_abbrev  0x00002262      0x109 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .debug_abbrev  0x0000236b      0x16a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .debug_abbrev  0x000024d5      0x16a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .debug_abbrev  0x0000263f      0x110 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .debug_abbrev  0x0000274f       0x66 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .debug_abbrev  0x000027b5      0x23e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .debug_abbrev  0x000029f3      0x1cc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .debug_abbrev  0x00002bbf       0xc0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .debug_abbrev  0x00002c7f      0x1e8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .debug_abbrev  0x00002e67      0x14e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .debug_abbrev  0x00002fb5      0x178 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .debug_abbrev  0x0000312d      0x200 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .debug_abbrev  0x0000332d      0x233 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .debug_abbrev  0x00003560      0x176 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .debug_abbrev  0x000036d6      0x1f7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .debug_abbrev  0x000038cd      0x1d8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .debug_abbrev  0x00003aa5      0x1c4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .debug_abbrev  0x00003c69      0x16f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .debug_abbrev  0x00003dd8       0x66 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .debug_abbrev  0x00003e3e       0xb0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .debug_abbrev  0x00003eee       0xde ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .debug_abbrev  0x00003fcc      0x163 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .debug_abbrev  0x0000412f       0xbb ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .debug_abbrev  0x000041ea      0x1ce lib\libPost.a(opt_scheduler.o)
+ .debug_abbrev  0x00000000      0x49f beta.o
+ .debug_abbrev  0x0000049f      0x457 protocol.o
+ .debug_abbrev  0x000008f6      0x43d smart_motor.o
+ .debug_abbrev  0x00000d33      0x285 lib/lib_hardware.o
+ .debug_abbrev  0x00000fb8      0x107 lib/lib_timerdef.o
+ .debug_abbrev  0x000010bf      0x1a8 lib/gen_clock.o
+ .debug_abbrev  0x00001267       0xc8 lib/lib_iopins.o
+ .debug_abbrev  0x0000132f      0x579 lib/lib_ctor.o
+ .debug_abbrev  0x000018a8      0x177 lib/lib_timers.o
+ .debug_abbrev  0x00001a1f      0x272 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .debug_abbrev  0x00001c91      0x23d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .debug_abbrev  0x00001ece      0x24b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .debug_abbrev  0x00002119      0x233 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .debug_abbrev  0x0000234c      0x24b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .debug_abbrev  0x00002597      0x10b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_abbrev  0x000026a2       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_abbrev  0x00002715       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_abbrev  0x00002788      0x1e1 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .debug_abbrev  0x00002969      0x109 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_abbrev  0x00002a72      0x16a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_abbrev  0x00002bdc      0x16a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_abbrev  0x00002d46      0x110 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_abbrev  0x00002e56       0x66 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .debug_abbrev  0x00002ebc      0x23e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_abbrev  0x000030fa      0x1cc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_abbrev  0x000032c6       0xc0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_abbrev  0x00003386      0x1e8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_abbrev  0x0000356e      0x14e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_abbrev  0x000036bc      0x178 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_abbrev  0x00003834      0x200 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_abbrev  0x00003a34      0x233 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_abbrev  0x00003c67      0x176 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_abbrev  0x00003ddd      0x1f7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_abbrev  0x00003fd4      0x1d8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_abbrev  0x000041ac      0x1c4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_abbrev  0x00004370      0x16f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_abbrev  0x000044df      0x224 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .debug_abbrev  0x00004703       0x66 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_abbrev  0x00004769       0xb0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_abbrev  0x00004819       0xde ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_abbrev  0x000048f7      0x163 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_abbrev  0x00004a5a       0xbb ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_abbrev  0x00004b15      0x1ce lib\libPost.a(opt_scheduler.o)
 
-.debug_line     0x00000000     0x40fe
+.debug_line     0x00000000     0x4a79
  *(.debug_line)
- .debug_line    0x00000000      0x31a beta.o
- .debug_line    0x0000031a      0x3be protocol.o
- .debug_line    0x000006d8      0x42b smart_motor.o
- .debug_line    0x00000b03      0x294 lib/lib_hardware.o
- .debug_line    0x00000d97       0xce lib/lib_timerdef.o
- .debug_line    0x00000e65      0x218 lib/gen_clock.o
- .debug_line    0x0000107d       0xbc lib/lib_iopins.o
- .debug_line    0x00001139      0x47c lib/lib_ctor.o
- .debug_line    0x000015b5      0x154 lib/lib_timers.o
- .debug_line    0x00001709      0x221 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .debug_line    0x0000192a      0x1e7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .debug_line    0x00001b11      0x13f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .debug_line    0x00001c50       0xa5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .debug_line    0x00001cf5       0xa6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .debug_line    0x00001d9b      0x15e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .debug_line    0x00001ef9       0xe3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .debug_line    0x00001fdc      0x12a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .debug_line    0x00002106      0x12b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .debug_line    0x00002231       0xef ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .debug_line    0x00002320      0x10e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .debug_line    0x0000242e      0x349 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .debug_line    0x00002777      0x187 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .debug_line    0x000028fe       0xf3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .debug_line    0x000029f1      0x137 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .debug_line    0x00002b28       0xfe ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .debug_line    0x00002c26      0x133 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .debug_line    0x00002d59      0x1af ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .debug_line    0x00002f08      0x241 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .debug_line    0x00003149      0x142 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .debug_line    0x0000328b      0x18f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .debug_line    0x0000341a      0x202 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .debug_line    0x0000361c      0x1ad ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .debug_line    0x000037c9      0x14b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .debug_line    0x00003914       0xc3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .debug_line    0x000039d7       0xfe ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .debug_line    0x00003ad5      0x10f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .debug_line    0x00003be4      0x19d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .debug_line    0x00003d81       0xc5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .debug_line    0x00003e46      0x2b8 lib\libPost.a(opt_scheduler.o)
+ .debug_line    0x00000000      0x3ae beta.o
+ .debug_line    0x000003ae      0x5e9 protocol.o
+ .debug_line    0x00000997      0x497 smart_motor.o
+ .debug_line    0x00000e2e      0x294 lib/lib_hardware.o
+ .debug_line    0x000010c2       0xce lib/lib_timerdef.o
+ .debug_line    0x00001190      0x218 lib/gen_clock.o
+ .debug_line    0x000013a8       0xbc lib/lib_iopins.o
+ .debug_line    0x00001464      0x47c lib/lib_ctor.o
+ .debug_line    0x000018e0      0x154 lib/lib_timers.o
+ .debug_line    0x00001a34      0x221 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .debug_line    0x00001c55      0x1e7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .debug_line    0x00001e3c      0x1d0 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .debug_line    0x0000200c      0x154 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .debug_line    0x00002160      0x1d2 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .debug_line    0x00002332      0x13f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_line    0x00002471       0xa5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_line    0x00002516       0xa6 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_line    0x000025bc      0x15e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .debug_line    0x0000271a       0xe3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_line    0x000027fd      0x12a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_line    0x00002927      0x12b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_line    0x00002a52       0xef ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_line    0x00002b41      0x10e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .debug_line    0x00002c4f      0x349 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_line    0x00002f98      0x187 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_line    0x0000311f       0xf3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_line    0x00003212      0x137 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_line    0x00003349       0xfe ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_line    0x00003447      0x133 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_line    0x0000357a      0x1af ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_line    0x00003729      0x241 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_line    0x0000396a      0x142 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_line    0x00003aac      0x18f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_line    0x00003c3b      0x202 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_line    0x00003e3d      0x1ad ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_line    0x00003fea      0x14b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_line    0x00004135      0x15a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .debug_line    0x0000428f       0xc3 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_line    0x00004352       0xfe ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_line    0x00004450      0x10f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_line    0x0000455f      0x19d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_line    0x000046fc       0xc5 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_line    0x000047c1      0x2b8 lib\libPost.a(opt_scheduler.o)
 
-.debug_frame    0x00000000      0x900
+.debug_frame    0x00000000      0xb10
  *(.debug_frame)
- .debug_frame   0x00000000       0x70 beta.o
- .debug_frame   0x00000070       0xa0 protocol.o
- .debug_frame   0x00000110       0xa0 smart_motor.o
- .debug_frame   0x000001b0       0x90 lib/lib_hardware.o
- .debug_frame   0x00000240       0x60 lib/gen_clock.o
- .debug_frame   0x000002a0       0xf0 lib/lib_ctor.o
- .debug_frame   0x00000390       0x20 lib/lib_timers.o
- .debug_frame   0x000003b0       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
- .debug_frame   0x000003f0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .debug_frame   0x00000410       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .debug_frame   0x00000440       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .debug_frame   0x00000460       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .debug_frame   0x00000480       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
- .debug_frame   0x000004c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .debug_frame   0x000004e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .debug_frame   0x00000500       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .debug_frame   0x00000520       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .debug_frame   0x00000540       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
- .debug_frame   0x00000560       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .debug_frame   0x00000590       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .debug_frame   0x000005c0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .debug_frame   0x000005e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .debug_frame   0x00000600       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .debug_frame   0x00000620       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .debug_frame   0x00000640       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .debug_frame   0x00000670       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .debug_frame   0x000006e0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .debug_frame   0x00000710       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .debug_frame   0x00000740       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .debug_frame   0x000007b0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .debug_frame   0x000007e0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .debug_frame   0x00000810       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .debug_frame   0x00000830       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .debug_frame   0x00000850       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
- .debug_frame   0x00000870       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .debug_frame   0x000008a0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .debug_frame   0x000008c0       0x40 lib\libPost.a(opt_scheduler.o)
+ .debug_frame   0x00000000       0xb0 beta.o
+ .debug_frame   0x000000b0      0x100 protocol.o
+ .debug_frame   0x000001b0       0xf0 smart_motor.o
+ .debug_frame   0x000002a0       0x90 lib/lib_hardware.o
+ .debug_frame   0x00000330       0x60 lib/gen_clock.o
+ .debug_frame   0x00000390       0xf0 lib/lib_ctor.o
+ .debug_frame   0x00000480       0x20 lib/lib_timers.o
+ .debug_frame   0x000004a0       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .debug_frame   0x000004e0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .debug_frame   0x00000500       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .debug_frame   0x00000570       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .debug_frame   0x00000590       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .debug_frame   0x00000600       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_frame   0x00000630       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_frame   0x00000650       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_frame   0x00000670       0x40 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .debug_frame   0x000006b0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_frame   0x000006d0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_frame   0x000006f0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_frame   0x00000710       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_frame   0x00000730       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .debug_frame   0x00000750       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_frame   0x00000780       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_frame   0x000007b0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_frame   0x000007d0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_frame   0x000007f0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_frame   0x00000810       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_frame   0x00000830       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_frame   0x00000860       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_frame   0x000008d0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_frame   0x00000900       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_frame   0x00000930       0x70 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_frame   0x000009a0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_frame   0x000009d0       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_frame   0x00000a00       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .debug_frame   0x00000a20       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_frame   0x00000a40       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_frame   0x00000a60       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_frame   0x00000a80       0x30 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_frame   0x00000ab0       0x20 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_frame   0x00000ad0       0x40 lib\libPost.a(opt_scheduler.o)
 
-.debug_str      0x00000000     0x22ef
+.debug_str      0x00000000     0x24c5
  *(.debug_str)
- .debug_str     0x00000000      0xf66 beta.o
-                               0x10b2 (size before relaxing)
- .debug_str     0x00000f66       0x40 protocol.o
-                                0xa1a (size before relaxing)
- .debug_str     0x00000fa6       0x10 smart_motor.o
-                                0xf2c (size before relaxing)
- .debug_str     0x00000fb6      0x1d7 lib/lib_hardware.o
+ .debug_str     0x00000000     0x10d4 beta.o
+                               0x1226 (size before relaxing)
+ .debug_str     0x000010d4        0xd protocol.o
+                                0xc36 (size before relaxing)
+ .debug_str     0x000010e1       0x1a smart_motor.o
+                                0xfca (size before relaxing)
+ .debug_str     0x000010fb      0x20a lib/lib_hardware.o
                                 0x841 (size before relaxing)
- .debug_str     0x0000118d      0x49b lib/lib_timerdef.o
+ .debug_str     0x00001305      0x49b lib/lib_timerdef.o
                                 0x6e9 (size before relaxing)
- .debug_str     0x00001628       0xfd lib/gen_clock.o
+ .debug_str     0x000017a0       0xfd lib/gen_clock.o
                                 0x1e1 (size before relaxing)
- .debug_str     0x00001725       0x42 lib/lib_iopins.o
+ .debug_str     0x0000189d       0x42 lib/lib_iopins.o
                                 0x10e (size before relaxing)
- .debug_str     0x00001767      0x2a2 lib/lib_ctor.o
+ .debug_str     0x000018df      0x29b lib/lib_ctor.o
                                0x11b9 (size before relaxing)
- .debug_str     0x00001a09       0x3d lib/lib_timers.o
+ .debug_str     0x00001b7a       0x3d lib/lib_timers.o
                                 0x49b (size before relaxing)
- .debug_str     0x00001a46       0xd7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
+ .debug_str     0x00001bb7       0xd7 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
                                 0x6bf (size before relaxing)
- .debug_str     0x00001b1d       0x3d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
+ .debug_str     0x00001c8e       0x3d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
                                 0x573 (size before relaxing)
- .debug_str     0x00001b5a       0x38 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_str     0x00001ccb       0x1d ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+                                0x586 (size before relaxing)
+ .debug_str     0x00001ce8       0x18 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+                                0x581 (size before relaxing)
+ .debug_str     0x00001d00       0x1a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+                                0x588 (size before relaxing)
+ .debug_str     0x00001d1a       0x38 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
                                 0x1a0 (size before relaxing)
- .debug_str     0x00001b92       0x57 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_str     0x00001d52       0x57 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
                                 0x10c (size before relaxing)
- .debug_str     0x00001be9       0x21 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_str     0x00001da9       0x21 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
                                 0x120 (size before relaxing)
- .debug_str     0x00001c0a       0x3a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
+ .debug_str     0x00001dca       0x3a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(errors.o)
                                 0x1bd (size before relaxing)
- .debug_str     0x00001c44       0x2e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_str     0x00001e04       0x2e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
                                 0x12c (size before relaxing)
- .debug_str     0x00001c72       0x2f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_str     0x00001e32       0x2f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
                                 0x15e (size before relaxing)
- .debug_str     0x00001ca1       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_str     0x00001e61       0x2a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
                                 0x159 (size before relaxing)
- .debug_str     0x00001ccb        0xa ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_str     0x00001e8b        0xa ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
                                 0x126 (size before relaxing)
- .debug_str     0x00001cd5        0xc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
+ .debug_str     0x00001e95        0xc ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(main.o)
                                  0xe4 (size before relaxing)
- .debug_str     0x00001ce1       0x79 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_str     0x00001ea1       0x79 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
                                 0x270 (size before relaxing)
- .debug_str     0x00001d5a       0x93 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_str     0x00001f1a       0x93 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
                                 0x1b9 (size before relaxing)
- .debug_str     0x00001ded       0x2e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_str     0x00001fad       0x2e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
                                  0xf5 (size before relaxing)
- .debug_str     0x00001e1b       0x77 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_str     0x00001fdb       0x77 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
                                 0x308 (size before relaxing)
- .debug_str     0x00001e92       0x3f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_str     0x00002052       0x3f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
                                 0x311 (size before relaxing)
- .debug_str     0x00001ed1       0x45 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_str     0x00002091       0x45 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
                                 0x303 (size before relaxing)
- .debug_str     0x00001f16       0x43 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_str     0x000020d6       0x43 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
                                 0x2db (size before relaxing)
- .debug_str     0x00001f59       0x8c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_str     0x00002119       0x8c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
                                 0x382 (size before relaxing)
- .debug_str     0x00001fe5       0x37 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_str     0x000021a5       0x37 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
                                 0x283 (size before relaxing)
- .debug_str     0x0000201c       0x49 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_str     0x000021dc       0x49 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
                                 0x2c4 (size before relaxing)
- .debug_str     0x00002065       0x85 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_str     0x00002225       0x85 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
                                 0x306 (size before relaxing)
- .debug_str     0x000020ea       0x47 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_str     0x000022aa       0x47 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
                                 0x2ee (size before relaxing)
- .debug_str     0x00002131       0x38 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_str     0x000022f1       0x38 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
                                 0x2d4 (size before relaxing)
- .debug_str     0x00002169       0x37 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_str     0x00002329       0x16 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+                                0x57f (size before relaxing)
+ .debug_str     0x0000233f       0x37 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
                                  0xf9 (size before relaxing)
- .debug_str     0x000021a0       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_str     0x00002376       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
                                 0x120 (size before relaxing)
- .debug_str     0x000021e6       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
+ .debug_str     0x000023bc       0x24 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(breathe.o)
                                  0xe7 (size before relaxing)
- .debug_str     0x0000220a       0x1f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_str     0x000023e0       0x1f ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
                                 0x13f (size before relaxing)
- .debug_str     0x00002229       0x1a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_str     0x000023ff       0x1a ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
                                 0x101 (size before relaxing)
- .debug_str     0x00002243       0xac lib\libPost.a(opt_scheduler.o)
+ .debug_str     0x00002419       0xac lib\libPost.a(opt_scheduler.o)
                                 0x1e0 (size before relaxing)
 
-.debug_loc      0x00000000     0x216f
+.debug_loc      0x00000000     0x25e8
  *(.debug_loc)
  .debug_loc     0x00000000       0x3c lib/lib_hardware.o
  .debug_loc     0x0000003c       0xb4 lib/gen_clock.o
@@ -1313,31 +1426,35 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .debug_loc     0x000002dd       0x68 lib/lib_timers.o
  .debug_loc     0x00000345      0x18c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servoPWM.o)
  .debug_loc     0x000004d1      0x17e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(servosConfig.o)
- .debug_loc     0x0000064f      0x1bd ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
- .debug_loc     0x0000080c       0xc8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
- .debug_loc     0x000008d4       0xee ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
- .debug_loc     0x000009c2       0x58 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
- .debug_loc     0x00000a1a       0x98 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
- .debug_loc     0x00000ab2       0xa8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
- .debug_loc     0x00000b5a       0x67 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
- .debug_loc     0x00000bc1      0x3ae ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
- .debug_loc     0x00000f6f      0x10b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
- .debug_loc     0x0000107a       0xea ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
- .debug_loc     0x00001164       0xd1 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
- .debug_loc     0x00001235       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
- .debug_loc     0x000012ab      0x172 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
- .debug_loc     0x0000141d      0x115 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
- .debug_loc     0x00001532      0x1b4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
- .debug_loc     0x000016e6       0x79 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
- .debug_loc     0x0000175f       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
- .debug_loc     0x000017d2      0x261 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
- .debug_loc     0x00001a33       0x8c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
- .debug_loc     0x00001abf       0x78 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
- .debug_loc     0x00001b37       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
- .debug_loc     0x00001b73      0x10e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
- .debug_loc     0x00001c81      0x228 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
- .debug_loc     0x00001ea9       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
- .debug_loc     0x00001eef      0x280 lib\libPost.a(opt_scheduler.o)
+ .debug_loc     0x0000064f      0x1ac ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamSigned.o)
+ .debug_loc     0x000007fb       0x7e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamString.o)
+ .debug_loc     0x00000879      0x209 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamUnsigned.o)
+ .debug_loc     0x00000a82      0x1bd ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(actuators.o)
+ .debug_loc     0x00000c3f       0xc8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interp.o)
+ .debug_loc     0x00000d07       0xee ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(core_interpU.o)
+ .debug_loc     0x00000df5       0x58 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_is_output.o)
+ .debug_loc     0x00000e4d       0x98 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_input.o)
+ .debug_loc     0x00000ee5       0xa8 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_make_output.o)
+ .debug_loc     0x00000f8d       0x67 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(led.o)
+ .debug_loc     0x00000ff4      0x3ae ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(marqueeSendByte.o)
+ .debug_loc     0x000013a2      0x10b ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled.o)
+ .debug_loc     0x000014ad       0xea ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(segled8.o)
+ .debug_loc     0x00001597       0xd1 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareFromIOPin.o)
+ .debug_loc     0x00001668       0x76 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetOutputMode.o)
+ .debug_loc     0x000016de      0x172 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(compareSetThreshold.o)
+ .debug_loc     0x00001850      0x115 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(_uart_common.o)
+ .debug_loc     0x00001965      0x1b4 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uart.o)
+ .debug_loc     0x00001b19       0x79 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRx.o)
+ .debug_loc     0x00001b92       0x73 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonRxNoBuf.o)
+ .debug_loc     0x00001c05      0x261 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTx.o)
+ .debug_loc     0x00001e66       0x8c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartCommonTxNoBuf.o)
+ .debug_loc     0x00001ef2       0x78 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(uartPollByte.o)
+ .debug_loc     0x00001f6a       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(StreamChar.o)
+ .debug_loc     0x00001fb0       0x3c ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsed.o)
+ .debug_loc     0x00001fec      0x10e ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(clockHasElapsedGetOverflow.o)
+ .debug_loc     0x000020fa      0x228 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin.o)
+ .debug_loc     0x00002322       0x46 ../../Users/jerome/Documents/2/2.08\libWebbot-ATmega640.a(iopin_set.o)
+ .debug_loc     0x00002368      0x280 lib\libPost.a(opt_scheduler.o)
 
 .debug_macinfo
  *(.debug_macinfo)

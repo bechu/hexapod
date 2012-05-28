@@ -1,9 +1,8 @@
 #include "smart_motor.h"
 
 
-SmartMotor::SmartMotor(Servo &servo)
+SmartMotor::SmartMotor()
 {
-	_servo = &servo;
 
 	_limit_min = DRIVE_SPEED_MIN;
 	_limit_max = DRIVE_SPEED_MAX;
@@ -15,6 +14,15 @@ SmartMotor::SmartMotor(Servo &servo)
 	_firsttime = true;
 }
 
+SmartMotor::~SmartMotor()
+{
+}
+
+void SmartMotor::link_servo(Servo &servo)
+{
+	_servo = &servo;
+}
+
 
 void SmartMotor::set_limit(DRIVE_SPEED min, DRIVE_SPEED max)
 {
@@ -22,22 +30,43 @@ void SmartMotor::set_limit(DRIVE_SPEED min, DRIVE_SPEED max)
 	_limit_max = max;
 }
 
+void SmartMotor::get_position(DRIVE_SPEED &position)
+{
+	position = _position;
+}
 
 void SmartMotor::set_position(DRIVE_SPEED position, int16_t t)
 {
+
+	//uart1.print("time");
+	//print(position);
+//	print(t);
+	
 	position = (position < _limit_min)? _limit_min : position;
 	position = (position > _limit_max)? _limit_max : position;
 
 	int16_t pos = interpolate(position, DRIVE_SPEED_MIN, DRIVE_SPEED_MAX, -SMART_SPEED, SMART_SPEED);
 	
-
-	_step_size = ((pos - _position) / t) * (HEXAPOD_LOOP_DURATION / 1000);
-	_step_count = (pos - _position) / _step_size;	
+	if(t < HEXAPOD_LOOP_DURATION/1000)
+	{
+		_step_size = (pos - _position);
+		_step_count = 1;
+	}
+	else
+	{
+		_step_size = ((pos - _position) / t) * (HEXAPOD_LOOP_DURATION / 1000);
+		_step_count = (pos - _position) / _step_size;	
+	}
 }
 
 bool SmartMotor::is_moving()
 {
 	return _step_count != 0;
+}
+
+void SmartMotor::stop_motion()
+{
+	_step_count = 0;
 }
 
 void SmartMotor::print(int16_t i)

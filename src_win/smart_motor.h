@@ -7,13 +7,21 @@
 class SmartMotor
 {
 public:
-	SmartMotor(Servo &servo);
+	SmartMotor();
+
+	~SmartMotor();
+
+	void link_servo(Servo &servo);
 	
 	void set_limit(DRIVE_SPEED min, DRIVE_SPEED max);
+
+	void get_position(DRIVE_SPEED &position);
 
 	void set_position(DRIVE_SPEED position, int16_t t); // t en ms
 
 	bool is_moving();
+
+	void stop_motion();
 
 	void compute();
 
@@ -28,7 +36,7 @@ private:
 	bool _firsttime;
 
 	void print(int16_t i);
-	static const int16_t SMART_SPEED = 15000;
+	static const int16_t SMART_SPEED = 16380;
 
 };
 

@@ -7,6 +7,8 @@ ERROR = 1
 PING  = 2
 
 class Parser(object):
+    SET_POS, GET_POS, GET_STATUS, STOP_MOTION = range(1, 5)
+    LENS = [0, 5, 2, 2, 2]
     def __init__(self):
         self.buffer = ""
         self.messages = []
@@ -22,9 +24,19 @@ class Parser(object):
         
     def parse(self):
         while len(self.buffer)>2:
-            self.messages.append([self.buffer[0], self.buffer[1]])
-            self.buffer = self.buffer[2:len(self.buffer)]
-            
+            cmd = struct.unpack("b", self.buffer[0])[0]
+            if cmd == 0 or cmd > 4:
+                #print "failed"
+                self.buffer = ""
+                break
+            size = self.LENS[cmd]
+            msg = []
+            msg.append( cmd )
+            for i in range(size):
+                msg.append( struct.unpack("b", self.buffer[i+1])[0] )
+            self.messages.append(msg)
+            self.buffer = self.buffer[size+1:len(self.buffer)]
+
 class Axon2(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -84,41 +96,80 @@ class Axon2(threading.Thread):
             str = self.read_serial()
             if len(str) > 0:
                 print str
-                #self.serial_mutex.acquire()
-                #self.parser.appendData(str)
-                #self.serial_mutex.release()
-                #messages = self.parser.messageParsed()
-                #if len(messages)>0:
-                #    for msg in messages:
-                #        for c in self.callbacks:
-                #            c.onReceive(msg)
+                self.serial_mutex.acquire()
+                self.parser.appendData(str)
+                self.serial_mutex.release()
+                messages = self.parser.messageParsed()
+                for msg in messages:
+                    for c in self.callbacks:
+                        c.onReceive(msg)
         
 class Motor(object):
     def __init__(self, id, serial):
-        self.id = id
+        self.id = int(id)
         self.real = 0
+        self.status = 0
         self.serial = serial
+        self.c = threading.Condition()
         self.serial.addCallback(self)
     
     def onReceive(self, msg):
         if len(msg) > 0:
-            if self.id == int(msg[0]):
-                self.real = int(msg[1])
+            if Parser.GET_POS == int(msg[0]):
+                if self.id == int(msg[1]):
+                    print "receive pos"
+                    self.real = int(msg[2])
+                    self.c.acquire()
+                    self.c.notify()
+                    self.c.release()
+            if Parser.GET_STATUS == int(msg[0]):
+                if self.id == int(msg[1]):
+                    print "receive status"
+                    self.status = int(msg[2])
+                    self.c.acquire()
+                    self.c.notify()
+                    self.c.release()
         
-    def setPosition(self, pos):
-        packet = struct.pack('bb', self.id, pos)
+    def setPosition(self, pos, tps):
+        packet = struct.pack('bbbBB', Parser.SET_POS, self.id, pos, tps/256, tps%256)
         self.serial.write_serial(packet)
         
     def getPosition(self):
+        packet = struct.pack('bb', Parser.GET_POS, self.id)
+        self.c.acquire()
+        self.serial.write_serial(packet)
+        self.c.wait(1)
+        self.c.release()
         return self.real
-
+        
+    def getStatus(self):
+        packet = struct.pack('bb', Parser.GET_STATUS, self.id)
+        self.c.acquire()
+        print "send status"
+        print struct.unpack("bb", packet)
+        self.serial.write_serial(packet)
+        self.c.wait(1)
+        self.c.release()
+        return self.status
+        
+    def stop(self):
+        packet = struct.pack('bb', Parser.STOP_MOTION, self.id)
+        self.serial.write_serial(packet)
+        
 def main():
     try:
         test = Axon2()
         m = Motor(1, test)
-        time.sleep(1)
-        m.setPosition(-120)
-        while True: time.sleep(100)
+        time.sleep(1)   
+        while True:
+            pos = raw_input('pos')
+            tps = raw_input('tps')
+            m.setPosition(int(pos),int(tps))
+            print "position : %d" % m.getPosition()
+            #print "status : %d" % m.getStatus()
+            #raw_input('attend position')
+            #print "position : %d" % m.getPosition()
+            #print "status : %d" % m.getStatus()
     except (KeyboardInterrupt, SystemExit):
         print '\n! Received keyboard interrupt, quitting threads.\n'
         
