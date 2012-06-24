@@ -54,19 +54,27 @@ int Protocol::treatIO(Packet &p)
 {	
 	const static uint8_t command_len[] = {BUFFER_SIZE, 5, 1, 1, 1};
 	
+	//send waiting packet
+	if(out_offset>0)
+	{
+		_write(out, out_offset);
+		out_offset = 0;
+	}
+
 	_read();
 	uint8_t len = BUFFER_SIZE;
+	//treat incomming packet
 	if(in_offset>0)
 	{
+		
+
 		if(in[0] == 0 || in[0] >= sizeof(command_len)/sizeof(uint8_t))
 		{
 			in_offset = 0;
 			return 0;
 		}
-	//	if(in[0]<sizeof(command_len))
+		
 		len = command_len[in[0]];
-
-		uart1<<"len : "<<len;
 		
 		if (in_offset>=len)
 		{
@@ -80,11 +88,7 @@ int Protocol::treatIO(Packet &p)
 			return 1;
 		}
 	}
-	if(out_offset>0)
-	{
-		_write(out, out_offset);
-		out_offset = 0;
-	}
+	
 	return 0;
 }
 
@@ -132,7 +136,7 @@ void Protocol::forge(Packet &p)
 		case Packet::GET_POS: {
 			p.cmd_id = in[0];
 			p.motor_id = in[1];
-			uart1<<" command "<<(int)in[0];
+			//uart1<<" command "<<(int)in[0];
 			break;
 		}
 		case Packet::GET_STATUS:{

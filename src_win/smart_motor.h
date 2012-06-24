@@ -15,9 +15,11 @@ public:
 	
 	void set_limit(DRIVE_SPEED min, DRIVE_SPEED max);
 
-	void get_position(DRIVE_SPEED &position);
+	DRIVE_SPEED get_position();
 
 	void set_position(DRIVE_SPEED position, int16_t t); // t en ms
+
+	void sinus(DRIVE_SPEED center,DRIVE_SPEED amplitude, int16_t T);
 
 	bool is_moving();
 

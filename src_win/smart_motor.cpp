@@ -30,9 +30,9 @@ void SmartMotor::set_limit(DRIVE_SPEED min, DRIVE_SPEED max)
 	_limit_max = max;
 }
 
-void SmartMotor::get_position(DRIVE_SPEED &position)
+DRIVE_SPEED SmartMotor::get_position()
 {
-	position = _position;
+	return interpolate(_position, -SMART_SPEED, SMART_SPEED, DRIVE_SPEED_MIN, DRIVE_SPEED_MAX);
 }
 
 void SmartMotor::set_position(DRIVE_SPEED position, int16_t t)
@@ -40,7 +40,7 @@ void SmartMotor::set_position(DRIVE_SPEED position, int16_t t)
 
 	//uart1.print("time");
 	//print(position);
-//	print(t);
+	//print(t);
 	
 	position = (position < _limit_min)? _limit_min : position;
 	position = (position > _limit_max)? _limit_max : position;
@@ -57,6 +57,16 @@ void SmartMotor::set_position(DRIVE_SPEED position, int16_t t)
 		_step_size = ((pos - _position) / t) * (HEXAPOD_LOOP_DURATION / 1000);
 		_step_count = (pos - _position) / _step_size;	
 	}
+}
+
+void SmartMotor::sinus(DRIVE_SPEED center,DRIVE_SPEED amplitude, int16_t T)
+{
+
+	//uart1.print(center);
+	//print(amplitude);
+	//print(T);
+	
+	//TODO
 }
 
 bool SmartMotor::is_moving()

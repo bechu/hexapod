@@ -39,13 +39,13 @@ void treat_packet(Packet &p){
 			break;
 		}
 		case Packet::GET_POS: {
-		//	motors[p.motor_id].get_position(p.pos);
-			//proto.send(p);
+			p.pos = motors[p.motor_id].get_position();
+			proto.send(p);
 			break;
 		}
 		case Packet::GET_STATUS:{
 			p.status = motors[p.motor_id].is_moving();
-			//proto.send(p);
+			proto.send(p);
 			break;
 		}
 		case Packet::STOP_MOTION: { 

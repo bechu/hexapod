@@ -95,7 +95,7 @@ class Axon2(threading.Thread):
         while self.run4ever == True:
             str = self.read_serial()
             if len(str) > 0:
-                print str
+                #print str
                 self.serial_mutex.acquire()
                 self.parser.appendData(str)
                 self.serial_mutex.release()
@@ -138,7 +138,7 @@ class Motor(object):
         packet = struct.pack('bb', Parser.GET_POS, self.id)
         self.c.acquire()
         self.serial.write_serial(packet)
-        self.c.wait(1)
+        #self.c.wait(1)
         self.c.release()
         return self.real
         
@@ -148,7 +148,7 @@ class Motor(object):
         print "send status"
         print struct.unpack("bb", packet)
         self.serial.write_serial(packet)
-        self.c.wait(1)
+        ##self.c.wait(1)
         self.c.release()
         return self.status
         
@@ -159,13 +159,18 @@ class Motor(object):
 def main():
     try:
         test = Axon2()
-        m = Motor(1, test)
+        m = Motor(0, test)
         time.sleep(1)   
         while True:
             pos = raw_input('pos')
             tps = raw_input('tps')
             m.setPosition(int(pos),int(tps))
-            print "position : %d" % m.getPosition()
+            for i in range(10):
+                m.getPosition()
+                time.sleep(0.1)
+                print m.real
+                
+            #print "position : %d" % m.getPosition()
             #print "status : %d" % m.getStatus()
             #raw_input('attend position')
             #print "position : %d" % m.getPosition()
